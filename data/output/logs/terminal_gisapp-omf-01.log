@@ -580,3 +580,23 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:14:22] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\runpy.py", line 85 in _run_code
 [2024-10-25 18:14:22] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\runpy.py", line 193 in _run_module_as_main
 [2024-10-25 18:14:22] Output: Windows fatal exception: code 0xe0000001
+[2024-10-25 18:14:23] Output: 
+[2024-10-25 18:14:23] Output: Current thread 0x00003058 (most recent call first):
+[2024-10-25 18:14:24] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 70 in __init__
+[2024-10-25 18:14:24] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 617 in <module>
+[2024-10-25 18:14:25] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:14:26] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:14:26] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:14:26] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:14:27] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:14:27] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\__init__.py", line 14 in <module>
+[2024-10-25 18:14:27] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:14:28] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:14:28] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:14:28] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:14:29] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:14:29] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\__init__.py", line 88 in <module>
+[2024-10-25 18:14:30] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:14:30] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:14:30] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:14:31] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
