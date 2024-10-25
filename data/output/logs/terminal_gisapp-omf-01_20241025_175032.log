@@ -2,3 +2,19 @@ Terminal session started on gisapp-omf-01 at Fri, Oct 25, 2024  5:50:32 PM
 [2024-10-25 17:50:33] [?2004h]0;MINGW64:/c/Users/A.A919579/Samantha/iamanarcpygenius
 [2024-10-25 17:50:33] [32mEXBDS+A.A919579@gisapp-omf-01 [35mMINGW64 [33m~/Samantha/iamanarcpygenius[36m (main)[0m
 [2024-10-25 17:50:47] $ python -m scripts.cli verify
+[2024-10-25 17:50:51] [?2004l2024-10-25 17:50:51,248 - scripts.helpers.verify_setup - INFO - Starting environment verification...
+[2024-10-25 17:50:51] 2024-10-25 17:50:51,248 - scripts.helpers.verify_setup - INFO - Python version: 3.7.11
+[2024-10-25 17:50:52] 2024-10-25 17:50:51,248 - scripts.helpers.verify_setup - INFO - \u2713 arcpy (for ArcGIS installation)
+[2024-10-25 17:50:52] 2024-10-25 17:50:51,248 - scripts.helpers.verify_setup - INFO - \u2713 click (for CLI support)
+[2024-10-25 17:50:52] 2024-10-25 17:50:52,119 - scripts.helpers.verify_setup - INFO - \u2713 pandas (for Data processing)
+[2024-10-25 17:50:53] 2024-10-25 17:50:52,119 - scripts.helpers.verify_setup - INFO - \u2713 yaml (for Configuration)
+[2024-10-25 17:50:53] 2024-10-25 17:50:52,197 - scripts.helpers.verify_setup - ERROR - \u2717 pytest (for Testing)
+[2024-10-25 17:50:54] 2024-10-25 17:50:52,197 - scripts.helpers.verify_setup - INFO - \u2713 ArcPy environment configured successfully
+[2024-10-25 17:50:55] 2024-10-25 17:50:52,197 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\mxd
+[2024-10-25 17:50:55] 2024-10-25 17:50:52,197 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\aprx
+[2024-10-25 17:50:55] 2024-10-25 17:50:52,197 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\pdf
+[2024-10-25 17:50:56] 2024-10-25 17:50:52,197 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
+[2024-10-25 17:50:56] 2024-10-25 17:50:52,197 - scripts.helpers.verify_setup - ERROR - \u2717 Some verification checks failed
+[2024-10-25 17:50:57] Environment verification failed. Check the logs for details.
+[2024-10-25 17:50:57] [?2004h]0;MINGW64:/c/Users/A.A919579/Samantha/iamanarcpygenius
+[2024-10-25 17:50:57] [32mEXBDS+A.A919579@gisapp-omf-01 [35mMINGW64 [33m~/Samantha/iamanarcpygenius[36m (main)[0m
