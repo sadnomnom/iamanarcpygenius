@@ -32,6 +32,7 @@ data/input/*
 !data/input/.gitkeep
 data/output/*
 !data/output/.gitkeep
+!data/output/logs/
 data/output/logs/*
 !data/output/logs/.gitkeep
 !data/output/logs/terminal_*.log
