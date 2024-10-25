@@ -1202,3 +1202,5 @@ e\lib\site-packages\click\core.py", line 783, in invoke
     except ConfigurationError as e:
 NameError: name 'ConfigurationError' is not defined
 Error: Map generation failed
+[2024-10-25 19:52:31] Command: ./run_this.sh 
+[2024-10-25 19:52:31] Output: Verifying environment setup...
