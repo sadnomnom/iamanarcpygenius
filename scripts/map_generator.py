@@ -5,17 +5,31 @@ from scripts.helpers.logging_utils import get_logger
 from scripts.file_handler import FileHandler
 from scripts.vegetation_processor import VegetationProcessor
 import traceback
+from scripts.config_loader import load_config
+from scripts.exceptions import ConfigurationError
 
 logger = get_logger(__name__)
 
 class MapGenerator:
     """Handles the complete map generation pipeline."""
     
-    def __init__(self, workspace: Path):
-        self.workspace = workspace
-        self.file_handler = FileHandler()
-        self.veg_processor = VegetationProcessor(workspace)
-        
+    def __init__(self, workspace: Optional[Path] = None):
+        """Initialize the map generator with workspace path."""
+        try:
+            self.config = load_config()
+            # Use provided workspace or get from config
+            self.workspace = workspace or Path(self.config['paths']['workspace'])
+            if not self.workspace.exists():
+                raise ConfigurationError(f"Workspace directory does not exist: {self.workspace}")
+            
+            self.file_handler = FileHandler()
+            self.veg_processor = VegetationProcessor(self.workspace)
+            logger.info(f"Initialized MapGenerator with workspace: {self.workspace}")
+            
+        except Exception as e:
+            logger.error(f"Failed to initialize MapGenerator: {e}")
+            raise
+    
     def generate_maps(self, source_sub: str, year: str) -> bool:
         """Generate all maps for a given substation with detailed logging."""
         logger.info(f"Starting map generation for {source_sub} (year: {year})")

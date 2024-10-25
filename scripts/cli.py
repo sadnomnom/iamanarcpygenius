@@ -76,7 +76,12 @@ def generate_maps(source_sub: str, year: str, resolution: int):
             click.echo(f"Error: Invalid substation. Valid options are: {valid_subs}", err=True)
             sys.exit(1)
         
+        # Get workspace from config
         workspace = Path(config['paths']['workspace'])
+        if not workspace.exists():
+            click.echo(f"Error: Workspace directory does not exist: {workspace}", err=True)
+            sys.exit(1)
+            
         generator = MapGenerator(workspace)
         
         if generator.generate_maps(source_sub, year):
