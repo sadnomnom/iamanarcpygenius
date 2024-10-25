@@ -2,28 +2,46 @@
 
 # Path configurations
 paths:
-  workspace: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/input"
-  mxd_input: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/input/mxd"
-  aprx_input: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/input/aprx"
-  pdf_output: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/output/pdf"
-  logs: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/output/logs"
+  workspace: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\GDB\\Working2025.gdb"
+  mxd_input: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025"
+  aprx_input: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025"
+  pdf_output: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025\\Export"
+  logs: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\GDB\\logs"
+  source_data:
+    xfmr: "\\gisapp-omf-01\\E\\Data\\DataStore\\PECO\\GTechElectricModel.gdb\\V_XFMR_PT"
+    pricond: "\\gisapp-omf-01\\E\\Data\\DataStore\\PECO\\GTechElectricModel.gdb\\PriCondSGB_MergeMCD"
+    mcd: "\\exelonds\\exutilshare\\GDVA\\PECO\\GDB\\BaseFeatures.gdb\\PECO_MCD_ServiceType"
+  excel:
+    source: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\Workspace\\2025\\DPM_Projects2025.xlsx"
+    sheet_name: "Export"
 
 # Processing options
 options:
-  default_year: "2024"
+  default_year: "2025"
   resolution: 300
   map_types:
     - Internal
     - External
     - InternalOverview
     - ExternalOverview
+  templates:
+    Internal: "TemplateInternal_2025_11x17.mxd"
+    External: "TemplateExternal_2025_11x17.mxd"
+    InternalOverview: "TemplateInternalOverview_2025_11x17.mxd"
+    ExternalOverview: "TemplateExternalOverview_2025_11x17.mxd"
 
 # Logging configuration
 logging:
   level: "INFO"
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
+arcpy:
+  env:
+    overwriteOutput: true
+    workspace: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\GDB\\Working2025.gdb"
+
 substations:
   - WOODBOURNE
   - FALLSINGTON
   - EMILIE
+  # Add other substations as needed

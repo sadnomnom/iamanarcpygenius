@@ -4,6 +4,7 @@ from typing import Optional, Union
 from scripts.helpers.logging_utils import get_logger
 from scripts.process_mxd import MXDProcessor
 from scripts.process_aprx import APRXProcessor
+import yaml
 
 logger = get_logger(__name__)
 
@@ -54,8 +55,10 @@ class FileHandler:
         """Process intersections between transformer and primary conductor layers."""
         try:
             logger.info(f"Starting intersection processing for {source_gdb}")
-            logger.debug(f"Input transformer: {in_xfmr}")
-            logger.debug(f"Input primary conductor: {in_pricond}")
+            
+            # Get paths from config
+            config = load_config()
+            mcd_path = config['paths']['source_data']['mcd']
             
             # Validate inputs
             if not arcpy.Exists(in_xfmr):
@@ -64,16 +67,10 @@ class FileHandler:
             if not arcpy.Exists(in_pricond):
                 logger.error(f"Primary conductor layer not found: {in_pricond}")
                 return False
-            if not arcpy.Exists(source_gdb):
-                logger.error(f"Source geodatabase not found: {source_gdb}")
-                return False
-                
-            # Validate MCD feature class exists
-            mcd_path = r"\\exelonds\exutilshare\GDVA\PECO\GDB\BaseFeatures.gdb\PECO_MCD_ServiceType"
             if not arcpy.Exists(mcd_path):
                 logger.error(f"MCD feature class not found: {mcd_path}")
                 return False
-
+            
             # Create Transformer_MCD intersection
             transformer_mcd = f"{source_gdb}\\Transformer_MCD"
             logger.info("Creating Transformer_MCD intersection...")
@@ -82,29 +79,21 @@ class FileHandler:
                 transformer_mcd,
                 output_type="POINT"
             )
-            if not arcpy.Exists(transformer_mcd):
-                logger.error("Failed to create Transformer_MCD intersection")
-                return False
-            logger.info("Successfully created Transformer_MCD intersection")
-
+            
             # Copy primary conductor
             logger.info("Copying primary conductor layers...")
-            for output_name in ["PriCondSGB_MergeMCD", "PriCondSGB_MergeMCD_2025"]:
+            year = config['options']['default_year']
+            for output_name in ["PriCondSGB_MergeMCD", f"PriCondSGB_MergeMCD_{year}"]:
                 output_path = f"{source_gdb}\\{output_name}"
                 arcpy.Copy_management(in_pricond, output_path)
-                if not arcpy.Exists(output_path):
-                    logger.error(f"Failed to create {output_name}")
-                    return False
-                logger.info(f"Successfully created {output_name}")
-            
+                
             return True
                 
         except arcpy.ExecuteError:
-            logger.error(f"ArcPy error in process_intersections: {arcpy.GetMessages(2)}")
+            logger.error(f"ArcPy error: {arcpy.GetMessages(2)}")
             return False
         except Exception as e:
             logger.error(f"Error in process_intersections: {str(e)}")
-            logger.error(f"Error details: {type(e).__name__}")
             return False
 
     def process_veg(self, in_pricond: str, in_xfmr: str, expression: str, 
@@ -174,3 +163,8 @@ class FileHandler:
                 row[0] = f"{row[1]}_{row[2]}"  # Circuit_MCD
                 row[3] = source_sub  # SUB
                 cursor.updateRow(row)
+
+def load_config():
+    with open('config/settings.yaml', 'r') as f:
+        config = yaml.safe_load(f)
+    return config

@@ -7,7 +7,7 @@ def mock_arcpy():
     with patch('arcpy') as mock:
         # Setup common arcpy mocks
         mock.env = Mock()
-        mock.mp = Mock()
+        mock.mp = Mock()  # ArcGIS Pro uses mp instead of mapping
         yield mock
 
 @pytest.fixture
