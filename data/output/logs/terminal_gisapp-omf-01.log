@@ -57,3 +57,27 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 17:56:06] Output: Downloading importlib_metadata-6.7.0-py3-none-any.whl (22 kB)
 [2024-10-25 17:56:06] Output: Downloading pluggy-1.2.0-py3-none-any.whl (17 kB)
 [2024-10-25 17:56:06] Output: Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+[2024-10-25 17:56:07] Output: Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+[2024-10-25 17:56:07] Output: Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+[2024-10-25 17:56:07] Output: Downloading packaging-24.0-py3-none-any.whl (53 kB)
+[2024-10-25 17:56:08] Output: ---------------------------------------- 53.5/53.5 kB 2.7 MB/s eta 0:00:00
+[2024-10-25 17:56:09] Output: Downloading typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+[2024-10-25 17:56:09] Output: Downloading zipp-3.15.0-py3-none-any.whl (6.8 kB)
+[2024-10-25 17:56:10] Output: DEPRECATION: pyodbc 4.0.0-unsupported has a non-standard version number. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of pyodbc or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
+[2024-10-25 17:56:11] Output: Installing collected packages: zipp, typing-extensions, tomli, packaging, iniconfig, exceptiongroup, coverage, colorama, importlib-metadata, pluggy, pytest, pytest-cov
+[2024-10-25 17:56:11] Output: Attempting uninstall: zipp
+[2024-10-25 17:56:11] Output: Found existing installation: zipp 3.4.1
+[2024-10-25 17:56:12] Output: Uninstalling zipp-3.4.1:
+[2024-10-25 17:56:13] Output: Successfully uninstalled zipp-3.4.1
+[2024-10-25 17:56:13] Output: Attempting uninstall: typing-extensions
+[2024-10-25 17:56:14] Output: Found existing installation: typing-extensions 3.7.4.3
+[2024-10-25 17:56:15] Output: Uninstalling typing-extensions-3.7.4.3:
+[2024-10-25 17:56:16] Output: Successfully uninstalled typing-extensions-3.7.4.3
+[2024-10-25 17:56:17] Output: Attempting uninstall: packaging
+[2024-10-25 17:56:17] Output: Found existing installation: packaging 20.9
+[2024-10-25 17:56:17] Output: Uninstalling packaging-20.9:
+[2024-10-25 17:56:18] Output: Successfully uninstalled packaging-20.9
+[2024-10-25 17:56:18] Output: Attempting uninstall: iniconfig
+[2024-10-25 17:56:18] Output: Found existing installation: iniconfig 1.1.1
+[2024-10-25 17:56:18] Output: Uninstalling iniconfig-1.1.1:
+[2024-10-25 17:56:19] Output: Successfully uninstalled iniconfig-1.1.1
