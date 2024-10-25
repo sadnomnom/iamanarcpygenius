@@ -1074,3 +1074,5 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 19:36:51] Output: 2024-10-25 19:36:51,550 - __main__ - ERROR - Failed to generate maps: 'workspace'
 [2024-10-25 19:36:51] Output: Error generating maps: 'workspace'
 [2024-10-25 19:36:53] Output: Error: Map generation failed
+[2024-10-25 19:37:44] Command: ./run_this.sh 
+[2024-10-25 19:37:44] Output: Verifying environment setup...
