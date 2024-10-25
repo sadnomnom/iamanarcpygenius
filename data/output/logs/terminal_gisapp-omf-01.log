@@ -356,3 +356,23 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:01:55] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
 [2024-10-25 18:01:56] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
 [2024-10-25 18:01:56] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:01:57] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:01:57] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\__init__.py", line 88 in <module>
+[2024-10-25 18:01:58] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:01:58] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:01:59] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:01:59] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:02:00] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:02:01] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\process_mxd.py", line 1 in <module>
+[2024-10-25 18:02:01] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:02:01] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:02:02] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:02:02] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:02:02] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:02:03] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\file_handler.py", line 4 in <module>
+[2024-10-25 18:02:03] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:02:04] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:02:05] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:02:05] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:02:06] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:02:06] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\tests\test_file_handler.py", line 3 in <module>
