@@ -455,3 +455,21 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:08:00] Output: "%s does not have the attribute %r" % (target, name)
 [2024-10-25 18:08:00] Output: E   AttributeError: <module 'scripts.file_handler' from 'C:\\Users\\A.A919579\\Samantha\\iamanarcpygenius\\scripts\\file_handler.py'> does not have the attribute 'arcpy'
 [2024-10-25 18:08:00] Output: ___________________ ERROR at setup of test_process_file_mxd ___________________
+[2024-10-25 18:08:01] Output: tests\conftest.py:7: in mock_arcpy
+[2024-10-25 18:08:01] Output: with patch('scripts.file_handler.arcpy') as mock:
+[2024-10-25 18:08:01] Output: ..\..\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\unittest\mock.py:1307: in __enter__
+[2024-10-25 18:08:01] Output: original, local = self.get_original()
+[2024-10-25 18:08:02] Output: ..\..\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\unittest\mock.py:1281: in get_original
+[2024-10-25 18:08:02] Output: "%s does not have the attribute %r" % (target, name)
+[2024-10-25 18:08:02] Output: E   AttributeError: <module 'scripts.file_handler' from 'C:\\Users\\A.A919579\\Samantha\\iamanarcpygenius\\scripts\\file_handler.py'> does not have the attribute 'arcpy'
+[2024-10-25 18:08:02] Output: ================================== FAILURES ===================================
+[2024-10-25 18:08:03] Output: _________________________ test_real_arcpy_operations __________________________
+[2024-10-25 18:08:03] Output: tests\integration\test_arcpy_operations.py:9: in test_real_arcpy_operations
+[2024-10-25 18:08:03] Output: assert hasattr(real_arcpy, 'mapping')
+[2024-10-25 18:08:03] Output: E   AssertionError: assert False
+[2024-10-25 18:08:04] Output: E    +  where False = hasattr(<module 'arcpy' from 'C:\\Program Files\\ArcGIS\\Pro\\Resources\\ArcPy\\arcpy\\__init__.py'>, 'mapping')
+[2024-10-25 18:08:04] Output: =========================== short test summary info ===========================
+[2024-10-25 18:08:04] Output: FAILED tests/integration/test_arcpy_operations.py::test_real_arcpy_operations
+[2024-10-25 18:08:04] Output: ERROR tests/unit/test_file_handler.py::test_validate_file - AttributeError: <...
+[2024-10-25 18:08:05] Output: ERROR tests/unit/test_file_handler.py::test_process_file_mxd - AttributeError...
+[2024-10-25 18:08:05] Output: =================== 1 failed, 1 skipped, 2 errors in 0.51s ====================
