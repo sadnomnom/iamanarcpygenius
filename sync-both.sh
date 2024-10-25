@@ -33,7 +33,7 @@ while true; do
         echo "No local changes to push."
     fi
     
-    echo "Next check in 1 seconds..."
+    echo "Next check in 1 seconds...hi"
     echo "------------------------"
     sleep 1
 done
