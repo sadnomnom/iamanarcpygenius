@@ -81,3 +81,27 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 17:56:18] Output: Found existing installation: iniconfig 1.1.1
 [2024-10-25 17:56:18] Output: Uninstalling iniconfig-1.1.1:
 [2024-10-25 17:56:19] Output: Successfully uninstalled iniconfig-1.1.1
+[2024-10-25 17:56:19] Output: Attempting uninstall: colorama
+[2024-10-25 17:56:19] Output: Found existing installation: colorama 0.4.4
+[2024-10-25 17:56:19] Output: Uninstalling colorama-0.4.4:
+[2024-10-25 17:56:20] Output: Successfully uninstalled colorama-0.4.4
+[2024-10-25 17:56:20] Output: Attempting uninstall: importlib-metadata
+[2024-10-25 17:56:20] Output: Found existing installation: importlib-metadata 3.7.3
+[2024-10-25 17:56:20] Output: Uninstalling importlib-metadata-3.7.3:
+[2024-10-25 17:56:21] Output: Successfully uninstalled importlib-metadata-3.7.3
+[2024-10-25 17:56:21] Output: Attempting uninstall: pluggy
+[2024-10-25 17:56:21] Output: Found existing installation: pluggy 0.13.1
+[2024-10-25 17:56:22] Output: Uninstalling pluggy-0.13.1:
+[2024-10-25 17:56:22] Output: Successfully uninstalled pluggy-0.13.1
+[2024-10-25 17:56:22] Output: Attempting uninstall: pytest
+[2024-10-25 17:56:23] Output: Found existing installation: pytest 7.4.4
+[2024-10-25 17:56:23] Output: Uninstalling pytest-7.4.4:
+[2024-10-25 17:56:23] Output: Successfully uninstalled pytest-7.4.4
+[2024-10-25 17:56:24] Output: Attempting uninstall: pytest-cov
+[2024-10-25 17:56:25] Output: Found existing installation: pytest-cov 4.1.0
+[2024-10-25 17:56:25] Output: Uninstalling pytest-cov-4.1.0:
+[2024-10-25 17:56:25] Output: Successfully uninstalled pytest-cov-4.1.0
+[2024-10-25 17:56:26] Output: ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+[2024-10-25 17:56:26] Output: flake8 3.9.0 requires pycodestyle<2.8.0,>=2.7.0, but you have pycodestyle 2.6.0 which is incompatible.
+[2024-10-25 17:56:27] Output: flake8 3.9.0 requires pyflakes<2.4.0,>=2.3.0, but you have pyflakes 2.2.0 which is incompatible.
+[2024-10-25 17:56:27] Output: Successfully installed colorama-0.4.6 coverage-7.2.7 exceptiongroup-1.2.2 importlib-metadata-6.7.0 iniconfig-2.0.0 packaging-24.0 pluggy-1.2.0 pytest-7.4.4 pytest-cov-4.1.0 tomli-2.0.1 typing-extensions-4.7.1 zipp-3.15.0
