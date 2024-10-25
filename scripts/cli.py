@@ -7,6 +7,7 @@ import sys
 from scripts.helpers.verify_setup import run_verification
 from scripts.process_mxd import MXDProcessor
 from scripts.process_aprx import APRXProcessor
+from scripts.map_generator import MapGenerator
 
 logger = get_logger(__name__)
 
@@ -58,6 +59,39 @@ def process_maps():
     except Exception as e:
         logger.error(f"Failed to process maps: {e}")
         click.echo("Failed to process maps. Check logs for details.", err=True)
+        sys.exit(1)
+
+@cli.command()
+@click.argument('source_sub')
+@click.option('--year', '-y', default='2024', help='Processing year')
+@click.option('--resolution', '-r', default=300, help='PDF export resolution (DPI)')
+def generate_maps(source_sub: str, year: str, resolution: int):
+    """Generate maps for a source substation."""
+    try:
+        config = load_config()
+        workspace = Path(config['paths']['workspace'])
+        generator = MapGenerator(workspace)
+        
+        if generator.generate_maps(source_sub, year):
+            click.echo(f"Successfully generated maps for {source_sub}")
+        else:
+            click.echo(f"Failed to generate maps for {source_sub}", err=True)
+            sys.exit(1)
+            
+    except Exception as e:
+        logger.error(f"Failed to generate maps: {e}")
+        click.echo(f"Error generating maps: {e}", err=True)
+        sys.exit(1)
+
+@cli.command()
+def gui():
+    """Launch the graphical user interface."""
+    try:
+        from scripts.tkinter_gui import main as gui_main
+        gui_main()
+    except Exception as e:
+        logger.error(f"Failed to start GUI: {e}")
+        click.echo(f"Error starting GUI: {e}", err=True)
         sys.exit(1)
 
 if __name__ == '__main__':
