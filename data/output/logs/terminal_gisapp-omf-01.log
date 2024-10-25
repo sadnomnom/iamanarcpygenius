@@ -1128,3 +1128,77 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 19:43:48] Output: if not generator.process_intersections():
 [2024-10-25 19:43:48] Output: AttributeError: 'MapGenerator' object has no attribute 'process_intersections'
 [2024-10-25 19:43:48] Output: 
+[2024-10-25 19:43:48] Output:
+Verifying environment setup...
+2024-10-25 19:44:06,573 - scripts.helpers.verify_setup - INFO - Starting en
+vironment verification...
+2024-10-25 19:44:06,573 - scripts.helpers.verify_setup - INFO - Python vers
+ion: 3.7.11
+2024-10-25 19:44:06,573 - scripts.helpers.verify_setup - INFO - ✓ arcpy (fo
+r ArcGIS installation)
+2024-10-25 19:44:06,573 - scripts.helpers.verify_setup - INFO - ✓ click (fo
+r CLI support)
+2024-10-25 19:44:07,192 - scripts.helpers.verify_setup - INFO - ✓ pandas (f
+or Data processing)
+2024-10-25 19:44:07,192 - scripts.helpers.verify_setup - INFO - ✓ yaml (for
+ Configuration)
+2024-10-25 19:44:07,192 - scripts.helpers.verify_setup - INFO - ✓ ArcPy env
+ironment configured successfully
+2024-10-25 19:44:07,192 - scripts.helpers.verify_setup - INFO - ✓ Directory
+ exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\mxd
+2024-10-25 19:44:07,192 - scripts.helpers.verify_setup - INFO - ✓ Directory
+ exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\aprx
+2024-10-25 19:44:07,192 - scripts.helpers.verify_setup - INFO - ✓ Directory
+ exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\pdf
+2024-10-25 19:44:07,192 - scripts.helpers.verify_setup - INFO - ✓ Directory
+ exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
+2024-10-25 19:44:07,192 - scripts.helpers.verify_setup - INFO - ✓ All verif
+ication checks passed
+Environment verification successful!
+
+Select processing mode:
+1. GUI Mode
+2. Command Line Mode
+Enter choice (1 or 2): 2
+Enter source substation: EMILIE
+Enter processing year [2024]: 2023
+
+Generating maps...
+Traceback (most recent call last):
+  File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\cli.py", line
+74, in generate_maps
+    if not validate_substation(source_sub, config):
+NameError: name 'validate_substation' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clon
+e\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clon
+e\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\cli.py", line
+109, in <module>
+    cli()
+  File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clon
+e\lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clon
+e\lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clon
+e\lib\site-packages\click\core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clon
+e\lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clon
+e\lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\cli.py", line
+88, in generate_maps
+    except ConfigurationError as e:
+NameError: name 'ConfigurationError' is not defined
+Error: Map generation failed
