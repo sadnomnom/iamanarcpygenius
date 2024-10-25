@@ -475,3 +475,5 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:08:05] Output: =================== 1 failed, 1 skipped, 2 errors in 0.51s ====================
 [2024-10-25 18:08:41] Command: echo $0
 [2024-10-25 18:08:41] Output: /usr/bin/bash
+[2024-10-25 18:13:30] Command: ./run_this.sh 
+[2024-10-25 18:13:31] Output: Running unit tests...
