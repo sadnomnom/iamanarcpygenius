@@ -491,3 +491,31 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:13:41] Output: ============================= test session starts =============================
 [2024-10-25 18:13:41] Output: platform win32 -- Python 3.7.11, pytest-7.4.4, pluggy-1.2.0 -- C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
 [2024-10-25 18:13:42] Output: cachedir: .pytest_cache
+[2024-10-25 18:13:42] Output: rootdir: C:\Users\A.A919579\Samantha\iamanarcpygenius
+[2024-10-25 18:13:42] Output: configfile: pytest.ini
+[2024-10-25 18:13:43] Output: plugins: cov-4.1.0
+[2024-10-25 18:13:43] Output: collecting ... collected 2 items
+[2024-10-25 18:13:44] Output: 
+[2024-10-25 18:13:44] Output: tests/integration/test_arcpy_operations.py::test_real_arcpy_operations PASSED [ 50%]
+[2024-10-25 18:13:44] Output: tests/integration/test_arcpy_operations.py::test_process_real_mxd SKIPPED [100%]
+[2024-10-25 18:13:45] Output: 
+[2024-10-25 18:13:45] Output: ======================== 1 passed, 1 skipped in 0.04s =========================
+[2024-10-25 18:13:45] Output: 
+[2024-10-25 18:13:46] Output: Running all tests with coverage...
+[2024-10-25 18:13:46] Output: ============================= test session starts =============================
+[2024-10-25 18:13:46] Output: platform win32 -- Python 3.7.11, pytest-7.4.4, pluggy-1.2.0 -- C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
+[2024-10-25 18:13:46] Output: cachedir: .pytest_cache
+[2024-10-25 18:13:47] Output: rootdir: C:\Users\A.A919579\Samantha\iamanarcpygenius
+[2024-10-25 18:13:47] Output: configfile: pytest.ini
+[2024-10-25 18:13:47] Output: plugins: cov-4.1.0
+[2024-10-25 18:13:47] Output: collecting ... Windows fatal exception: code 0xe0000001
+[2024-10-25 18:13:48] Output: 
+[2024-10-25 18:13:48] Output: Current thread 0x00003058 (most recent call first):
+[2024-10-25 18:13:48] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 70 in __init__
+[2024-10-25 18:13:49] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 617 in <module>
+[2024-10-25 18:13:49] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:13:50] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:13:50] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:13:50] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:13:51] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:13:51] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\__init__.py", line 14 in <module>
