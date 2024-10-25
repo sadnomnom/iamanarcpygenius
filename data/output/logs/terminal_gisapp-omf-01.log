@@ -788,3 +788,33 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:16:08] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_manager.py", line 112 in _hookexec
 [2024-10-25 18:18:46] Command: ./run_this.sh 
 [2024-10-25 18:18:47] Output: Verifying pytest installation...
+[2024-10-25 18:18:51] Output: 2024-10-25 18:18:51,007 - scripts.helpers.verify_setup - INFO - Starting environment verification...
+[2024-10-25 18:18:51] Output: 2024-10-25 18:18:51,007 - scripts.helpers.verify_setup - INFO - Python version: 3.7.11
+[2024-10-25 18:18:52] Output: 2024-10-25 18:18:51,007 - scripts.helpers.verify_setup - INFO - \u2713 arcpy (for ArcGIS installation)
+[2024-10-25 18:18:52] Output: 2024-10-25 18:18:51,007 - scripts.helpers.verify_setup - INFO - \u2713 click (for CLI support)
+[2024-10-25 18:18:52] Output: 2024-10-25 18:18:51,834 - scripts.helpers.verify_setup - INFO - \u2713 pandas (for Data processing)
+[2024-10-25 18:18:53] Output: 2024-10-25 18:18:51,835 - scripts.helpers.verify_setup - INFO - \u2713 yaml (for Configuration)
+[2024-10-25 18:18:53] Output: 2024-10-25 18:18:52,059 - scripts.helpers.verify_setup - INFO - \u2713 pytest (for Testing)
+[2024-10-25 18:18:53] Output: 2024-10-25 18:18:52,059 - scripts.helpers.verify_setup - INFO - \u2713 ArcPy environment configured successfully
+[2024-10-25 18:18:53] Output: 2024-10-25 18:18:52,066 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\mxd
+[2024-10-25 18:18:53] Output: 2024-10-25 18:18:52,066 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\aprx
+[2024-10-25 18:18:54] Output: 2024-10-25 18:18:52,066 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\pdf
+[2024-10-25 18:18:54] Output: 2024-10-25 18:18:52,066 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
+[2024-10-25 18:18:54] Output: 2024-10-25 18:18:52,066 - scripts.helpers.verify_setup - INFO - \u2713 All verification checks passed
+[2024-10-25 18:18:55] Output: Environment verification successful!
+[2024-10-25 18:18:55] Output: 
+[2024-10-25 18:18:56] Output: Running unit tests...
+[2024-10-25 18:18:56] Output: ============================= test session starts =============================
+[2024-10-25 18:18:56] Output: platform win32 -- Python 3.7.11, pytest-7.4.4, pluggy-1.2.0 -- C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
+[2024-10-25 18:18:56] Output: cachedir: .pytest_cache
+[2024-10-25 18:18:56] Output: rootdir: C:\Users\A.A919579\Samantha\iamanarcpygenius
+[2024-10-25 18:18:57] Output: configfile: pytest.ini
+[2024-10-25 18:18:57] Output: plugins: cov-4.1.0
+[2024-10-25 18:18:57] Output: collecting ... Windows fatal exception: code 0xe0000001
+[2024-10-25 18:18:58] Output: 
+[2024-10-25 18:18:58] Output: Current thread 0x000036e4 (most recent call first):
+[2024-10-25 18:18:59] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 70 in __init__
+[2024-10-25 18:18:59] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 617 in <module>
+[2024-10-25 18:19:00] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:19:00] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:19:01] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
