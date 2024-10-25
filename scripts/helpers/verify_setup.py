@@ -12,8 +12,7 @@ def check_dependencies() -> Dict[str, bool]:
         'arcpy': 'ArcGIS installation',
         'click': 'CLI support',
         'pandas': 'Data processing',
-        'yaml': 'Configuration',
-        'pytest': 'Testing'
+        'yaml': 'Configuration'
     }
     
     results = {}

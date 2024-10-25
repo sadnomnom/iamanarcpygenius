@@ -56,21 +56,5 @@ def verify():
         sys.exit(1)
     click.echo("Environment verification successful!")
 
-@cli.command()
-@click.option('--type', '-t', type=click.Choice(['unit', 'integration', 'all']), default='unit')
-def test(type):
-    """Run tests of specified type."""
-    import pytest
-    
-    args = ['-v']
-    if type == 'unit':
-        args.extend(['-m', 'unit', 'tests/unit'])
-    elif type == 'integration':
-        args.extend(['-m', 'integration', '--assert=plain', 'tests/integration'])
-    else:
-        args.extend(['tests/unit', 'tests/integration'])
-    
-    pytest.main(args)
-
 if __name__ == '__main__':
     cli()
