@@ -3,6 +3,9 @@
 while true; do
     echo "=== Git Sync Check ==="
     
+    # Run log cleanup
+    ./log-cleanup.sh
+    
     # First pull any remote changes
     echo "Checking for remote changes..."
     git fetch
@@ -17,23 +20,17 @@ while true; do
     # Then check for local changes
     if [[ $(git status --porcelain) ]]; then
         echo "Local changes detected. Committing and pushing..."
-        
-        # Add all changes
         git add .
-        
-        # Create commit with timestamp and hostname
         hostname=$(hostname)
         timestamp=$(date "+%Y-%m-%d %H:%M:%S")
         git commit -m "Auto-sync from $hostname: $timestamp"
-        
-        # Push changes
         git push
         echo "Changes pushed successfully!"
     else
         echo "No local changes to push."
     fi
     
-    echo "Next check in 30 seconds..."
+    echo "Next check in 1 seconds..."
     echo "------------------------"
     sleep 1
 done
