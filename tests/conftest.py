@@ -4,10 +4,9 @@ from unittest.mock import Mock, patch
 @pytest.fixture
 def mock_arcpy():
     """Mock arcpy for unit tests"""
-    with patch('scripts.file_handler.arcpy') as mock:
+    with patch('arcpy') as mock:
         # Setup common arcpy mocks
         mock.env = Mock()
-        mock.mapping = Mock()
         mock.mp = Mock()
         yield mock
 
