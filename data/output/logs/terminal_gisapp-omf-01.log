@@ -902,3 +902,20 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:19:48] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
 [2024-10-25 18:19:48] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
 [2024-10-25 18:19:49] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:19:49] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:19:50] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:19:50] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\process_mxd.py", line 1 in <module>
+[2024-10-25 18:19:51] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:19:51] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:19:52] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:19:52] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:19:53] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:19:53] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\file_handler.py", line 4 in <module>
+[2024-10-25 18:19:53] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:19:54] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:19:54] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:19:55] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:19:56] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:19:56] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\tests\unit\test_file_handler.py", line 3 in <module>
+[2024-10-25 18:19:57] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:19:57] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
