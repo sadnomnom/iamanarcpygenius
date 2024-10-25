@@ -17,9 +17,10 @@ foreach ($dir in $directories) {
 $env:PIP_DISABLE_PIP_VERSION_CHECK = 1
 $env:PYTHONHTTPSVERIFY = 0
 
-# Create Python virtual environment and activate it
-python -m venv venv
-.\venv\Scripts\Activate
+# Verify ArcGIS Pro environment
+Write-Host "`nVerifying ArcGIS Pro environment...`n"
+$arcpyVersion = python -c "import arcpy; print(arcpy.GetInstallInfo()['Version'])"
+Write-Host "ArcGIS Pro version: $arcpyVersion"
 
 # Upgrade pip and install requirements with SSL verification disabled
 Write-Host "`nUpgrading pip and installing requirements...`n"
@@ -56,4 +57,4 @@ Get-ChildItem -Recurse -Directory | Select-Object FullName
 
 Write-Host "`nEnvironment setup complete!`n"
 Write-Host "Note: Make sure you have ArcGIS installed for arcpy functionality"
-Write-Host "To activate the environment in the future, run: .\venv\Scripts\Activate"
+Write-Host "Using ArcGIS Pro Python environment: $arcpyVersion"
