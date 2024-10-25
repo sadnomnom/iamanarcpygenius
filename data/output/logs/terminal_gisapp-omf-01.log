@@ -229,3 +229,18 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:00:33] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
 [2024-10-25 18:00:33] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\file_handler.py", line 4 in <module>
 [2024-10-25 18:00:34] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 18:00:35] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 18:00:36] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:00:36] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:00:37] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:00:37] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\tests\test_file_handler.py", line 3 in <module>
+[2024-10-25 18:00:38] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\assertion\rewrite.py", line 186 in exec_module
+[2024-10-25 18:00:38] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 18:00:39] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:00:39] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 18:00:39] Output: File "<frozen importlib._bootstrap>", line 1006 in _gcd_import
+[2024-10-25 18:00:40] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\importlib\__init__.py", line 127 in import_module
+[2024-10-25 18:00:40] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\pathlib.py", line 567 in import_path
+[2024-10-25 18:00:41] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\python.py", line 617 in _importtestmodule
+[2024-10-25 18:00:42] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\python.py", line 528 in _getobj
+[2024-10-25 18:00:42] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\python.py", line 310 in obj
