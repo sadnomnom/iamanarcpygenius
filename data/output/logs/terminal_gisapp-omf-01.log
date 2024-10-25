@@ -402,3 +402,12 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:02:23] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_manager.py", line 112 in _hookexec
 [2024-10-25 18:02:24] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_hooks.py", line 433 in __call__
 [2024-10-25 18:06:48] Command: python -m scripts.cli test -t unit
+[2024-10-25 18:06:52] Output: ============================= test session starts =============================
+[2024-10-25 18:06:52] Output: platform win32 -- Python 3.7.11, pytest-7.4.4, pluggy-1.2.0 -- C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
+[2024-10-25 18:06:52] Output: cachedir: .pytest_cache
+[2024-10-25 18:06:52] Output: rootdir: C:\Users\A.A919579\Samantha\iamanarcpygenius
+[2024-10-25 18:06:53] Output: configfile: pytest.ini
+[2024-10-25 18:06:53] Output: plugins: cov-4.1.0
+[2024-10-25 18:06:53] Output: collecting ... collected 2 items / 2 deselected / 0 selected
+[2024-10-25 18:06:53] Output: 
+[2024-10-25 18:06:53] Output: ============================ 2 deselected in 0.03s ============================
