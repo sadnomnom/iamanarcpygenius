@@ -1076,3 +1076,20 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 19:36:53] Output: Error: Map generation failed
 [2024-10-25 19:37:44] Command: ./run_this.sh 
 [2024-10-25 19:37:44] Output: Verifying environment setup...
+[2024-10-25 19:37:48] Output: 2024-10-25 19:37:47,998 - scripts.helpers.verify_setup - INFO - Starting environment verification...
+[2024-10-25 19:37:48] Output: 2024-10-25 19:37:47,998 - scripts.helpers.verify_setup - INFO - Python version: 3.7.11
+[2024-10-25 19:37:48] Output: 2024-10-25 19:37:47,998 - scripts.helpers.verify_setup - INFO - \u2713 arcpy (for ArcGIS installation)
+[2024-10-25 19:37:48] Output: 2024-10-25 19:37:47,998 - scripts.helpers.verify_setup - INFO - \u2713 click (for CLI support)
+[2024-10-25 19:37:49] Output: 2024-10-25 19:37:48,664 - scripts.helpers.verify_setup - INFO - \u2713 pandas (for Data processing)
+[2024-10-25 19:37:49] Output: 2024-10-25 19:37:48,664 - scripts.helpers.verify_setup - INFO - \u2713 yaml (for Configuration)
+[2024-10-25 19:37:49] Output: 2024-10-25 19:37:48,664 - scripts.helpers.verify_setup - INFO - \u2713 ArcPy environment configured successfully
+[2024-10-25 19:37:49] Output: 2024-10-25 19:37:48,664 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\mxd
+[2024-10-25 19:37:49] Output: 2024-10-25 19:37:48,664 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\aprx
+[2024-10-25 19:37:50] Output: 2024-10-25 19:37:48,664 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\pdf
+[2024-10-25 19:37:50] Output: 2024-10-25 19:37:48,664 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
+[2024-10-25 19:37:50] Output: 2024-10-25 19:37:48,664 - scripts.helpers.verify_setup - INFO - \u2713 All verification checks passed
+[2024-10-25 19:37:50] Output: Environment verification successful!
+[2024-10-25 19:37:50] Output: 
+[2024-10-25 19:37:51] Output: Select processing mode:
+[2024-10-25 19:37:51] Output: 1. GUI Mode
+[2024-10-25 19:37:51] Output: 2. Command Line Mode
