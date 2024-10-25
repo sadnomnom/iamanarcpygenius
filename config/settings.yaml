@@ -2,7 +2,8 @@
 
 # Path configurations
 paths:
-  workspace: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\GDB\\Working2025.gdb"
+  workspace: "\\\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\GDB\\Working2025.gdb"
+  # Use double backslashes for Windows paths
   mxd_input: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025"
   aprx_input: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025"
   pdf_output: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025\\Export"

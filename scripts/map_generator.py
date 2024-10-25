@@ -5,8 +5,7 @@ from scripts.helpers.logging_utils import get_logger
 from scripts.file_handler import FileHandler
 from scripts.vegetation_processor import VegetationProcessor
 import traceback
-from scripts.config_loader import load_config
-from scripts.exceptions import ConfigurationError
+from scripts.helpers.config_utils import load_config, ConfigurationError
 
 logger = get_logger(__name__)
 
@@ -104,3 +103,16 @@ class MapGenerator:
         output_dir = self.workspace.parent / "MXD" / year / "Export" / source_sub
         output_dir.mkdir(parents=True, exist_ok=True)
         return output_dir / f"{source_sub}_{map_type}_{year}_11x17.pdf"
+
+    def process_intersections(self) -> bool:
+        """Process intersections for the workspace."""
+        try:
+            config = self.config['paths']['source_data']
+            return self.file_handler.process_intersections(
+                config['xfmr'],
+                config['pricond'],
+                str(self.workspace)
+            )
+        except Exception as e:
+            logger.error(f"Failed to process intersections: {e}")
+            return False

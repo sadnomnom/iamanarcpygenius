@@ -1,7 +1,11 @@
 import click
 from pathlib import Path
 from scripts.file_handler import FileHandler
-from scripts.helpers.config_utils import load_config
+from scripts.helpers.config_utils import (
+    load_config, 
+    validate_substation, 
+    ConfigurationError
+)
 from scripts.helpers.logging_utils import get_logger
 import sys
 from scripts.helpers.verify_setup import run_verification

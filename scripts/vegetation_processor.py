@@ -12,6 +12,7 @@ class VegetationProcessor:
     def __init__(self, workspace: Path):
         self.workspace = workspace
         self.config = load_config()
+        self.file_handler = FileHandler()  # Add this line
         arcpy.env.workspace = str(workspace)
         arcpy.env.overwriteOutput = True
         
