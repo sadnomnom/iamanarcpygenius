@@ -4,6 +4,7 @@ from typing import Dict, List, Optional
 from scripts.helpers.logging_utils import get_logger
 from scripts.file_handler import FileHandler
 from scripts.vegetation_processor import VegetationProcessor
+import traceback
 
 logger = get_logger(__name__)
 
@@ -16,24 +17,35 @@ class MapGenerator:
         self.veg_processor = VegetationProcessor(workspace)
         
     def generate_maps(self, source_sub: str, year: str) -> bool:
-        """Generate all maps for a given substation."""
+        """Generate all maps for a given substation with detailed logging."""
+        logger.info(f"Starting map generation for {source_sub} (year: {year})")
+        
         try:
             # Process vegetation data
+            logger.info("Building SQL expression...")
             expression = self._build_expression(source_sub)
+            logger.debug(f"SQL Expression: {expression}")
+            
+            logger.info("Processing vegetation data...")
             if not self.veg_processor.process_vegetation_data(source_sub, expression):
+                logger.error("Vegetation data processing failed")
                 return False
             
             # Process maps
             map_types = ['Internal', 'External', 'InternalOverview', 'ExternalOverview']
             for map_type in map_types:
+                logger.info(f"Processing {map_type} map...")
                 if not self._process_map(source_sub, map_type, year):
-                    logger.error(f"Failed to process {map_type} map for {source_sub}")
+                    logger.error(f"Failed to process {map_type} map")
                     return False
+                logger.info(f"Successfully processed {map_type} map")
             
+            logger.info(f"Map generation completed successfully for {source_sub}")
             return True
             
         except Exception as e:
             logger.error(f"Error in map generation pipeline: {e}")
+            logger.error(traceback.format_exc())
             return False
     
     def _build_expression(self, source_sub: str) -> str:
