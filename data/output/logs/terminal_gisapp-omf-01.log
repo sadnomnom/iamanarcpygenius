@@ -412,3 +412,22 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:06:53] Output: 
 [2024-10-25 18:06:53] Output: ============================ 2 deselected in 0.03s ============================
 [2024-10-25 18:07:22] Command: python -m scripts.cli test -t integration
+[2024-10-25 18:07:27] Output: ============================= test session starts =============================
+[2024-10-25 18:07:27] Output: platform win32 -- Python 3.7.11, pytest-7.4.4, pluggy-1.2.0 -- C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
+[2024-10-25 18:07:27] Output: cachedir: .pytest_cache
+[2024-10-25 18:07:27] Output: rootdir: C:\Users\A.A919579\Samantha\iamanarcpygenius
+[2024-10-25 18:07:28] Output: configfile: pytest.ini
+[2024-10-25 18:07:28] Output: plugins: cov-4.1.0
+[2024-10-25 18:07:28] Output: collecting ... collected 2 items
+[2024-10-25 18:07:29] Output: 
+[2024-10-25 18:07:29] Output: tests/integration/test_arcpy_operations.py::test_real_arcpy_operations FAILED [ 50%]
+[2024-10-25 18:07:29] Output: tests/integration/test_arcpy_operations.py::test_process_real_mxd SKIPPED [100%]
+[2024-10-25 18:07:29] Output: 
+[2024-10-25 18:07:30] Output: ================================== FAILURES ===================================
+[2024-10-25 18:07:30] Output: _________________________ test_real_arcpy_operations __________________________
+[2024-10-25 18:07:30] Output: tests\integration\test_arcpy_operations.py:9: in test_real_arcpy_operations
+[2024-10-25 18:07:30] Output: assert hasattr(real_arcpy, 'mapping')
+[2024-10-25 18:07:30] Output: E   AssertionError
+[2024-10-25 18:07:31] Output: =========================== short test summary info ===========================
+[2024-10-25 18:07:31] Output: FAILED tests/integration/test_arcpy_operations.py::test_real_arcpy_operations
+[2024-10-25 18:07:31] Output: ======================== 1 failed, 1 skipped in 0.16s =========================
