@@ -1,5 +1,4 @@
-# Create sync-both.sh
-echo '#!/bin/bash
+#!/bin/bash
 
 while true; do
     echo "=== Git Sync Check ==="
@@ -34,10 +33,7 @@ while true; do
         echo "No local changes to push."
     fi
     
-    echo "Next check in 30 seconds..."
+    echo "Next check in 1 seconds..."
     echo "------------------------"
     sleep 1
-done' > sync-both.sh
-
-# Make it executable
-chmod +x sync-both.sh
+done
