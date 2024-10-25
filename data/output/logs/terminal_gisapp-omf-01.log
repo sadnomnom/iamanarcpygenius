@@ -1069,3 +1069,5 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 19:35:22] Output: Select processing mode:
 [2024-10-25 19:35:22] Output: 1. GUI Mode
 [2024-10-25 19:35:22] Output: 2. Command Line Mode
+[2024-10-25 19:36:48] Output: Enter choice (1 or 2): Enter source substation: Enter processing year [2024]:
+[2024-10-25 19:36:48] Output: Generating maps...
