@@ -1254,3 +1254,22 @@ Error: Map generation failed
 [2024-10-25 19:59:09] Output: 2024-10-25 19:59:08,571 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
 [2024-10-25 19:59:17] Output: 2024-10-25 19:59:16,895 - scripts.helpers.config_utils - ERROR - Invalid substation: ANGORA
 [2024-10-25 19:59:17] Output: 2024-10-25 19:59:16,895 - scripts.helpers.config_utils - INFO - Valid substations: EMILIE, FALLSINGTON, WOODBOURNE
+[2024-10-25 19:59:24] Output: 2024-10-25 19:59:24,132 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\MXD\2025
+[2024-10-25 19:59:24] Output: 2024-10-25 19:59:24,132 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\MXD\2025
+[2024-10-25 19:59:24] Output: 2024-10-25 19:59:24,132 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\MXD\2025\Export
+[2024-10-25 19:59:25] Output: 2024-10-25 19:59:24,132 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+[2024-10-25 19:59:25] Output: 2024-10-25 19:59:24,148 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\MXD\2025
+[2024-10-25 19:59:25] Output: 2024-10-25 19:59:24,148 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\MXD\2025
+[2024-10-25 19:59:25] Output: 2024-10-25 19:59:24,148 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\MXD\2025\Export
+[2024-10-25 19:59:26] Output: 2024-10-25 19:59:24,148 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+[2024-10-25 19:59:26] Output: 2024-10-25 19:59:24,148 - scripts.map_generator - ERROR - Failed to initialize MapGenerator: name 'FileHandler' is not defined
+[2024-10-25 19:59:26] Output: 2024-10-25 19:59:24,148 - scripts.tkinter_gui - ERROR - Error in GUI processing: name 'FileHandler' is not defined
+[2024-10-25 19:59:26] Output: 2024-10-25 19:59:24,148 - scripts.tkinter_gui - ERROR - Traceback (most recent call last):
+[2024-10-25 19:59:26] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\tkinter_gui.py", line 97, in process_maps
+[2024-10-25 19:59:27] Output: generator = MapGenerator(workspace)
+[2024-10-25 19:59:27] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\map_generator.py", line 25, in __init__
+[2024-10-25 19:59:27] Output: self.veg_processor = VegetationProcessor(self.workspace)
+[2024-10-25 19:59:28] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\vegetation_processor.py", line 15, in __init__
+[2024-10-25 19:59:28] Output: self.file_handler = FileHandler()  # Add this line
+[2024-10-25 19:59:28] Output: NameError: name 'FileHandler' is not defined
+[2024-10-25 19:59:28] Output: 
