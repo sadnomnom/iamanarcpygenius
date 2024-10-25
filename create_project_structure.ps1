@@ -5,8 +5,7 @@ $directories = @(
     "data/input/aprx",
     "data/output/pdf",
     "data/output/logs",
-    "scripts/helpers",
-    "tests"
+    "scripts/helpers"
 )
 
 foreach ($dir in $directories) {
@@ -30,9 +29,7 @@ python -m pip install --upgrade pip --no-warn-script-location --disable-pip-vers
 $packages = @(
     "click>=8.0.0",
     "pandas>=1.3.0",
-    "PyYAML>=5.4.1",
-    "pytest>=7.0.0",
-    "pytest-cov>=4.0.0"
+    "PyYAML>=5.4.1"
 )
 
 foreach ($package in $packages) {
@@ -46,10 +43,6 @@ New-Item "data/input/mxd/.gitkeep" -ItemType File -Force
 New-Item "data/input/aprx/.gitkeep" -ItemType File -Force
 New-Item "data/output/pdf/.gitkeep" -ItemType File -Force
 New-Item "data/output/logs/.gitkeep" -ItemType File -Force
-
-# Verify pytest installation
-Write-Host "`nVerifying pytest installation...`n"
-python -m pip list | findstr "pytest"
 
 # Verify the structure was created
 Write-Host "`nProject structure created successfully!`n"
