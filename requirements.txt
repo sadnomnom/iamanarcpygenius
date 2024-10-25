@@ -1,0 +1,5 @@
+# Note: arcpy is installed with ArcGIS and cannot be installed via pip
+click>=8.0.0
+pandas>=1.3.0
+PyYAML>=5.4.1
+
