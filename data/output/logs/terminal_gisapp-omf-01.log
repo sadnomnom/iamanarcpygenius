@@ -1012,3 +1012,15 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 19:30:58] Output: Enter choice (1 or 2): Launching GUI...
 [2024-10-25 19:32:00] Command: 1
 [2024-10-25 19:32:00] Output: bash: 1: command not found
+[2024-10-25 19:32:03] Command: ./run_this.sh 
+[2024-10-25 19:32:04] Output: Verifying environment setup...
+[2024-10-25 19:32:07] Output: 2024-10-25 19:32:07,678 - scripts.helpers.verify_setup - INFO - Starting environment verification...
+[2024-10-25 19:32:08] Output: 2024-10-25 19:32:07,678 - scripts.helpers.verify_setup - INFO - Python version: 3.7.11
+[2024-10-25 19:32:08] Output: 2024-10-25 19:32:07,678 - scripts.helpers.verify_setup - INFO - \u2713 arcpy (for ArcGIS installation)
+[2024-10-25 19:32:08] Output: 2024-10-25 19:32:07,678 - scripts.helpers.verify_setup - INFO - \u2713 click (for CLI support)
+[2024-10-25 19:32:09] Output: 2024-10-25 19:32:08,493 - scripts.helpers.verify_setup - INFO - \u2713 pandas (for Data processing)
+[2024-10-25 19:32:09] Output: 2024-10-25 19:32:08,493 - scripts.helpers.verify_setup - INFO - \u2713 yaml (for Configuration)
+[2024-10-25 19:32:09] Output: 2024-10-25 19:32:08,493 - scripts.helpers.verify_setup - INFO - \u2713 ArcPy environment configured successfully
+[2024-10-25 19:32:09] Output: 2024-10-25 19:32:08,539 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\mxd
+[2024-10-25 19:32:09] Output: 2024-10-25 19:32:08,540 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\aprx
+[2024-10-25 19:32:10] Output: 2024-10-25 19:32:08,540 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\pdf
