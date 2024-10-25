@@ -990,3 +990,5 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:22:47] Output: 2024-10-25 18:22:45,328 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
 [2024-10-25 18:22:47] Output: 2024-10-25 18:22:45,329 - scripts.helpers.verify_setup - INFO - \u2713 All verification checks passed
 [2024-10-25 18:22:48] Output: Environment verification successful!
+[2024-10-25 19:30:22] Command: ./run_this.sh 
+[2024-10-25 19:30:23] Output: Verifying environment setup...
