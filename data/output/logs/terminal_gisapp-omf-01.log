@@ -107,3 +107,4 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 17:56:27] Output: Successfully installed colorama-0.4.6 coverage-7.2.7 exceptiongroup-1.2.2 importlib-metadata-6.7.0 iniconfig-2.0.0 packaging-24.0 pluggy-1.2.0 pytest-7.4.4 pytest-cov-4.1.0 tomli-2.0.1 typing-extensions-4.7.1 zipp-3.15.0
 [2024-10-25 17:57:30] Command: python -m pytest --version
 [2024-10-25 17:57:32] Output: pytest 7.4.4
+[2024-10-25 17:57:47] Command: python -m scripts.cli verify
