@@ -122,3 +122,9 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 17:57:53] Output: 2024-10-25 17:57:51,848 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
 [2024-10-25 17:57:54] Output: 2024-10-25 17:57:51,848 - scripts.helpers.verify_setup - INFO - \u2713 All verification checks passed
 [2024-10-25 17:57:54] Output: Environment verification successful!
+[2024-10-25 17:59:32] Command: python -m pytest -v
+[2024-10-25 17:59:34] Output: ============================= test session starts =============================
+[2024-10-25 17:59:34] Output: platform win32 -- Python 3.7.11, pytest-7.4.4, pluggy-1.2.0 -- C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
+[2024-10-25 17:59:34] Output: cachedir: .pytest_cache
+[2024-10-25 17:59:35] Output: rootdir: C:\Users\A.A919579\Samantha\iamanarcpygenius
+[2024-10-25 17:59:35] Output: plugins: cov-4.1.0
