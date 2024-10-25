@@ -762,3 +762,15 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:15:51] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
 [2024-10-25 18:15:52] Output: File "<frozen importlib._bootstrap>", line 1006 in _gcd_import
 [2024-10-25 18:15:52] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\importlib\__init__.py", line 127 in import_module
+[2024-10-25 18:15:53] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\pathlib.py", line 567 in import_path
+[2024-10-25 18:15:54] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\python.py", line 617 in _importtestmodule
+[2024-10-25 18:15:55] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\python.py", line 528 in _getobj
+[2024-10-25 18:15:55] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\python.py", line 310 in obj
+[2024-10-25 18:15:56] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\python.py", line 545 in _inject_setup_module_fixture
+[2024-10-25 18:15:56] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\python.py", line 531 in collect
+[2024-10-25 18:15:57] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\runner.py", line 372 in <lambda>
+[2024-10-25 18:15:57] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\runner.py", line 341 in from_call
+[2024-10-25 18:15:58] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\runner.py", line 372 in pytest_make_collect_report
+[2024-10-25 18:15:58] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_callers.py", line 80 in _multicall
+[2024-10-25 18:15:59] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_manager.py", line 112 in _hookexec
+[2024-10-25 18:15:59] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_hooks.py", line 433 in __call__
