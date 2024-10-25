@@ -1,5 +1,4 @@
-# Create terminal-logger.sh
-echo '#!/bin/bash
+#!/bin/bash
 
 # Get the directory of this script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -25,7 +24,4 @@ echo "Terminal session started on $HOSTNAME at $(date)" > "$LOG_FILE"
 
 # Start logging
 script -f -q "$LOG_FILE" | log_with_timestamp
-' > terminal-logger.sh
 
-# Make it executable
-chmod +x terminal-logger.sh
