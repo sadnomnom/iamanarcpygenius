@@ -128,3 +128,22 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 17:59:34] Output: cachedir: .pytest_cache
 [2024-10-25 17:59:35] Output: rootdir: C:\Users\A.A919579\Samantha\iamanarcpygenius
 [2024-10-25 17:59:35] Output: plugins: cov-4.1.0
+[2024-10-25 17:59:37] Output: collecting ... Windows fatal exception: code 0xe0000001
+[2024-10-25 17:59:37] Output: 
+[2024-10-25 17:59:37] Output: Current thread 0x000029ec (most recent call first):
+[2024-10-25 17:59:38] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 70 in __init__
+[2024-10-25 17:59:38] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 617 in <module>
+[2024-10-25 17:59:39] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 17:59:39] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 17:59:39] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 17:59:40] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 17:59:40] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 17:59:40] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\__init__.py", line 14 in <module>
+[2024-10-25 17:59:41] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 17:59:42] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 17:59:42] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 17:59:42] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 17:59:43] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 17:59:43] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\__init__.py", line 88 in <module>
+[2024-10-25 17:59:44] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 17:59:44] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
