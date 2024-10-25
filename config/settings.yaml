@@ -2,18 +2,28 @@
 
 # Path configurations
 paths:
-  mxd_input: "data/input/mxd"
-  aprx_input: "data/input/aprx"
-  pdf_output: "data/output/pdf"
-  logs: "data/output/logs"
+  workspace: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/input"
+  mxd_input: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/input/mxd"
+  aprx_input: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/input/aprx"
+  pdf_output: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/output/pdf"
+  logs: "C:/Users/A.A919579/Samantha/iamanarcpygenius/data/output/logs"
 
 # Processing options
 options:
-  default_year: 2024
-  pdf_resolution: 300
-  overwrite_existing: false
+  default_year: "2024"
+  resolution: 300
+  map_types:
+    - Internal
+    - External
+    - InternalOverview
+    - ExternalOverview
 
 # Logging configuration
 logging:
   level: "INFO"
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+substations:
+  - WOODBOURNE
+  - FALLSINGTON
+  - EMILIE
