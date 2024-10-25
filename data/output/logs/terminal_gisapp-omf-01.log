@@ -1230,3 +1230,20 @@ Error: Map generation failed
 [2024-10-25 19:53:00] Output: Error: Environment verification failed
 [2024-10-25 19:58:52] Command: ./run_this.sh 
 [2024-10-25 19:58:52] Output: Verifying environment setup...
+[2024-10-25 19:58:57] Output: 2024-10-25 19:58:56,715 - scripts.helpers.verify_setup - INFO - Starting environment verification...
+[2024-10-25 19:58:57] Output: 2024-10-25 19:58:56,715 - scripts.helpers.verify_setup - INFO - Python version: 3.7.11
+[2024-10-25 19:58:57] Output: 2024-10-25 19:58:56,715 - scripts.helpers.verify_setup - INFO - \u2713 arcpy (for ArcGIS installation)
+[2024-10-25 19:58:58] Output: 2024-10-25 19:58:56,715 - scripts.helpers.verify_setup - INFO - \u2713 click (for CLI support)
+[2024-10-25 19:58:58] Output: 2024-10-25 19:58:57,616 - scripts.helpers.verify_setup - INFO - \u2713 pandas (for Data processing)
+[2024-10-25 19:58:58] Output: 2024-10-25 19:58:57,616 - scripts.helpers.verify_setup - INFO - \u2713 yaml (for Configuration)
+[2024-10-25 19:58:59] Output: 2024-10-25 19:58:57,616 - scripts.helpers.verify_setup - INFO - \u2713 ArcPy environment configured successfully
+[2024-10-25 19:58:59] Output: 2024-10-25 19:58:57,616 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\mxd
+[2024-10-25 19:59:00] Output: 2024-10-25 19:58:57,616 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\aprx
+[2024-10-25 19:59:00] Output: 2024-10-25 19:58:57,616 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\pdf
+[2024-10-25 19:59:00] Output: 2024-10-25 19:58:57,632 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
+[2024-10-25 19:59:00] Output: 2024-10-25 19:58:57,632 - scripts.helpers.verify_setup - INFO - \u2713 All verification checks passed
+[2024-10-25 19:59:00] Output: Environment verification successful!
+[2024-10-25 19:59:01] Output: 
+[2024-10-25 19:59:01] Output: Select processing mode:
+[2024-10-25 19:59:01] Output: 1. GUI Mode
+[2024-10-25 19:59:01] Output: 2. Command Line Mode
