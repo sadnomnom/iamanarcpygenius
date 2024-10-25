@@ -432,3 +432,26 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:07:31] Output: FAILED tests/integration/test_arcpy_operations.py::test_real_arcpy_operations
 [2024-10-25 18:07:31] Output: ======================== 1 failed, 1 skipped in 0.16s =========================
 [2024-10-25 18:07:51] Command: python -m scripts.cli test -t all
+[2024-10-25 18:07:55] Output: ============================= test session starts =============================
+[2024-10-25 18:07:56] Output: platform win32 -- Python 3.7.11, pytest-7.4.4, pluggy-1.2.0 -- C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
+[2024-10-25 18:07:56] Output: cachedir: .pytest_cache
+[2024-10-25 18:07:56] Output: rootdir: C:\Users\A.A919579\Samantha\iamanarcpygenius
+[2024-10-25 18:07:56] Output: configfile: pytest.ini
+[2024-10-25 18:07:57] Output: plugins: cov-4.1.0
+[2024-10-25 18:07:57] Output: collecting ... collected 4 items
+[2024-10-25 18:07:57] Output: 
+[2024-10-25 18:07:57] Output: tests/unit/test_file_handler.py::test_validate_file ERROR                [ 25%]
+[2024-10-25 18:07:58] Output: tests/unit/test_file_handler.py::test_process_file_mxd ERROR             [ 50%]
+[2024-10-25 18:07:58] Output: tests/integration/test_arcpy_operations.py::test_real_arcpy_operations FAILED [ 75%]
+[2024-10-25 18:07:58] Output: tests/integration/test_arcpy_operations.py::test_process_real_mxd SKIPPED [100%]
+[2024-10-25 18:07:58] Output: 
+[2024-10-25 18:07:58] Output: =================================== ERRORS ====================================
+[2024-10-25 18:07:59] Output: ____________________ ERROR at setup of test_validate_file _____________________
+[2024-10-25 18:07:59] Output: tests\conftest.py:7: in mock_arcpy
+[2024-10-25 18:07:59] Output: with patch('scripts.file_handler.arcpy') as mock:
+[2024-10-25 18:07:59] Output: ..\..\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\unittest\mock.py:1307: in __enter__
+[2024-10-25 18:08:00] Output: original, local = self.get_original()
+[2024-10-25 18:08:00] Output: ..\..\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\unittest\mock.py:1281: in get_original
+[2024-10-25 18:08:00] Output: "%s does not have the attribute %r" % (target, name)
+[2024-10-25 18:08:00] Output: E   AttributeError: <module 'scripts.file_handler' from 'C:\\Users\\A.A919579\\Samantha\\iamanarcpygenius\\scripts\\file_handler.py'> does not have the attribute 'arcpy'
+[2024-10-25 18:08:00] Output: ___________________ ERROR at setup of test_process_file_mxd ___________________
