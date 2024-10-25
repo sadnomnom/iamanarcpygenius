@@ -18,29 +18,63 @@ class VegetationProcessor:
     def process_vegetation_data(self, source_sub: str, expression: str) -> bool:
         """Process vegetation management data for a given substation."""
         try:
+            logger.info(f"Processing vegetation data for {source_sub}")
+            logger.debug(f"Using workspace: {self.workspace}")
+            logger.debug(f"SQL Expression: {expression}")
+            
+            # Validate workspace
+            if not self.workspace.exists():
+                logger.error(f"Workspace does not exist: {self.workspace}")
+                return False
+                
+            # Set workspace
+            arcpy.env.workspace = str(self.workspace)
+            
             # Create feature layers
-            in_xfmr_lyr = arcpy.MakeFeatureLayer_management(
-                "XFMR_MCD",
-                f"XFMR_MCD_{source_sub}",
-                expression
-            )
+            logger.info("Creating feature layers...")
+            xfmr_layer = f"XFMR_MCD_{source_sub}"
+            pricond_layer = f"PriCond_MCD_{source_sub}"
             
-            in_pricond_lyr = arcpy.MakeFeatureLayer_management(
-                "PriCond_MCD",
-                f"PriCond_MCD_{source_sub}",
-                expression
-            )
-            
+            try:
+                in_xfmr_lyr = arcpy.MakeFeatureLayer_management(
+                    "XFMR_MCD",
+                    xfmr_layer,
+                    expression
+                )
+                
+                in_pricond_lyr = arcpy.MakeFeatureLayer_management(
+                    "PriCond_MCD",
+                    pricond_layer,
+                    expression
+                )
+            except arcpy.ExecuteError:
+                logger.error(f"Failed to create feature layers: {arcpy.GetMessages(2)}")
+                return False
+                
+            # Process intersections
+            logger.info("Processing intersections...")
+            if not self.file_handler.process_intersections(
+                xfmr_layer, 
+                pricond_layer, 
+                str(self.workspace)
+            ):
+                logger.error("Failed to process intersections")
+                return False
+                
             # Process statistics
+            logger.info("Processing statistics...")
             self._process_statistics(in_pricond_lyr, in_xfmr_lyr, source_sub)
             
             # Update fields
+            logger.info("Updating fields...")
             self._update_fields(source_sub)
             
+            logger.info(f"Successfully processed vegetation data for {source_sub}")
             return True
-            
+                
         except Exception as e:
             logger.error(f"Error processing vegetation data: {e}")
+            logger.error(f"Error details: {type(e).__name__}")
             return False
     
     def _process_statistics(self, pricond_lyr: str, xfmr_lyr: str, source_sub: str):
