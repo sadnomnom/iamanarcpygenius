@@ -24,3 +24,36 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 17:55:22] Output: pytest                            7.4.4
 [2024-10-25 17:55:23] Output: pytest-cov                        4.1.0
 [2024-10-25 17:55:53] Command: python -m pip install --force-reinstall pytest pytest-cov
+[2024-10-25 17:55:55] Output: Collecting pytest
+[2024-10-25 17:55:55] Output: Downloading pytest-7.4.4-py3-none-any.whl.metadata (7.9 kB)
+[2024-10-25 17:55:56] Output: Collecting pytest-cov
+[2024-10-25 17:55:56] Output: Downloading pytest_cov-4.1.0-py3-none-any.whl.metadata (26 kB)
+[2024-10-25 17:55:57] Output: Collecting iniconfig (from pytest)
+[2024-10-25 17:55:57] Output: Downloading iniconfig-2.0.0-py3-none-any.whl.metadata (2.6 kB)
+[2024-10-25 17:55:57] Output: Collecting packaging (from pytest)
+[2024-10-25 17:55:58] Output: Downloading packaging-24.0-py3-none-any.whl.metadata (3.2 kB)
+[2024-10-25 17:55:58] Output: Collecting pluggy<2.0,>=0.12 (from pytest)
+[2024-10-25 17:55:58] Output: Downloading pluggy-1.2.0-py3-none-any.whl.metadata (4.4 kB)
+[2024-10-25 17:55:59] Output: Collecting exceptiongroup>=1.0.0rc8 (from pytest)
+[2024-10-25 17:55:59] Output: Downloading exceptiongroup-1.2.2-py3-none-any.whl.metadata (6.6 kB)
+[2024-10-25 17:56:00] Output: Collecting tomli>=1.0.0 (from pytest)
+[2024-10-25 17:56:00] Output: Downloading tomli-2.0.1-py3-none-any.whl.metadata (8.9 kB)
+[2024-10-25 17:56:00] Output: Collecting importlib-metadata>=0.12 (from pytest)
+[2024-10-25 17:56:00] Output: Downloading importlib_metadata-6.7.0-py3-none-any.whl.metadata (4.9 kB)
+[2024-10-25 17:56:01] Output: Collecting colorama (from pytest)
+[2024-10-25 17:56:01] Output: Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+[2024-10-25 17:56:01] Output: Collecting coverage>=5.2.1 (from coverage[toml]>=5.2.1->pytest-cov)
+[2024-10-25 17:56:01] Output: Downloading coverage-7.2.7-cp37-cp37m-win_amd64.whl.metadata (9.9 kB)
+[2024-10-25 17:56:02] Output: Collecting zipp>=0.5 (from importlib-metadata>=0.12->pytest)
+[2024-10-25 17:56:02] Output: Downloading zipp-3.15.0-py3-none-any.whl.metadata (3.7 kB)
+[2024-10-25 17:56:03] Output: Collecting typing-extensions>=3.6.4 (from importlib-metadata>=0.12->pytest)
+[2024-10-25 17:56:03] Output: Downloading typing_extensions-4.7.1-py3-none-any.whl.metadata (3.1 kB)
+[2024-10-25 17:56:03] Output: Downloading pytest-7.4.4-py3-none-any.whl (325 kB)
+[2024-10-25 17:56:04] Output: ---------------------------------------- 325.3/325.3 kB 1.1 MB/s eta 0:00:00
+[2024-10-25 17:56:04] Output: Downloading pytest_cov-4.1.0-py3-none-any.whl (21 kB)
+[2024-10-25 17:56:04] Output: Downloading coverage-7.2.7-cp37-cp37m-win_amd64.whl (204 kB)
+[2024-10-25 17:56:05] Output: ---------------------------------------- 204.0/204.0 kB 3.1 MB/s eta 0:00:00
+[2024-10-25 17:56:05] Output: Downloading exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
+[2024-10-25 17:56:06] Output: Downloading importlib_metadata-6.7.0-py3-none-any.whl (22 kB)
+[2024-10-25 17:56:06] Output: Downloading pluggy-1.2.0-py3-none-any.whl (17 kB)
+[2024-10-25 17:56:06] Output: Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
