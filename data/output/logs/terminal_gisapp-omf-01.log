@@ -786,3 +786,5 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:16:06] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\main.py", line 318 in pytest_cmdline_main
 [2024-10-25 18:16:07] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_callers.py", line 80 in _multicall
 [2024-10-25 18:16:08] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_manager.py", line 112 in _hookexec
+[2024-10-25 18:18:46] Command: ./run_this.sh 
+[2024-10-25 18:18:47] Output: Verifying pytest installation...
