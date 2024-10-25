@@ -477,3 +477,17 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:08:41] Output: /usr/bin/bash
 [2024-10-25 18:13:30] Command: ./run_this.sh 
 [2024-10-25 18:13:31] Output: Running unit tests...
+[2024-10-25 18:13:36] Output: ============================= test session starts =============================
+[2024-10-25 18:13:36] Output: platform win32 -- Python 3.7.11, pytest-7.4.4, pluggy-1.2.0 -- C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
+[2024-10-25 18:13:36] Output: cachedir: .pytest_cache
+[2024-10-25 18:13:37] Output: rootdir: C:\Users\A.A919579\Samantha\iamanarcpygenius
+[2024-10-25 18:13:37] Output: configfile: pytest.ini
+[2024-10-25 18:13:37] Output: plugins: cov-4.1.0
+[2024-10-25 18:13:37] Output: collecting ... collected 2 items / 2 deselected / 0 selected
+[2024-10-25 18:13:38] Output: 
+[2024-10-25 18:13:38] Output: ============================ 2 deselected in 0.03s ============================
+[2024-10-25 18:13:38] Output: 
+[2024-10-25 18:13:38] Output: Running integration tests...
+[2024-10-25 18:13:41] Output: ============================= test session starts =============================
+[2024-10-25 18:13:41] Output: platform win32 -- Python 3.7.11, pytest-7.4.4, pluggy-1.2.0 -- C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\python.exe
+[2024-10-25 18:13:42] Output: cachedir: .pytest_cache
