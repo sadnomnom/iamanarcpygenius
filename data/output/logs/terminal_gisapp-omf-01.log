@@ -1038,3 +1038,9 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 19:33:43] Output: workspace = Path(self.config['paths']['workspace'])
 [2024-10-25 19:33:43] Output: KeyError: 'workspace'
 [2024-10-25 19:33:44] Output: 
+[2024-10-25 19:34:09] Output: 2024-10-25 19:34:09,244 - scripts.tkinter_gui - ERROR - Error in GUI processing: 'workspace'
+[2024-10-25 19:34:09] Output: 2024-10-25 19:34:09,245 - scripts.tkinter_gui - ERROR - Traceback (most recent call last):
+[2024-10-25 19:34:09] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\tkinter_gui.py", line 94, in process_maps
+[2024-10-25 19:34:10] Output: workspace = Path(self.config['paths']['workspace'])
+[2024-10-25 19:34:10] Output: KeyError: 'workspace'
+[2024-10-25 19:34:10] Output: 
