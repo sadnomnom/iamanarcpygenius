@@ -1247,3 +1247,8 @@ Error: Map generation failed
 [2024-10-25 19:59:01] Output: Select processing mode:
 [2024-10-25 19:59:01] Output: 1. GUI Mode
 [2024-10-25 19:59:01] Output: 2. Command Line Mode
+[2024-10-25 19:59:04] Output: Enter choice (1 or 2): Launching GUI...
+[2024-10-25 19:59:08] Output: 2024-10-25 19:59:08,571 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\MXD\2025
+[2024-10-25 19:59:09] Output: 2024-10-25 19:59:08,571 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\MXD\2025
+[2024-10-25 19:59:09] Output: 2024-10-25 19:59:08,571 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\MXD\2025\Export
+[2024-10-25 19:59:09] Output: 2024-10-25 19:59:08,571 - scripts.helpers.config_utils - WARNING - Path does not exist: \exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
