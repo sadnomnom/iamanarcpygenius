@@ -1217,3 +1217,14 @@ Error: Map generation failed
 [2024-10-25 19:52:38] Output: Error: Environment verification failed
 [2024-10-25 19:52:54] Command: ./run_this.sh 
 [2024-10-25 19:52:54] Output: Verifying environment setup...
+[2024-10-25 19:52:58] Output: Traceback (most recent call last):
+[2024-10-25 19:52:58] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\runpy.py", line 193, in _run_module_as_main
+[2024-10-25 19:52:58] Output: "__main__", mod_spec)
+[2024-10-25 19:52:58] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\runpy.py", line 85, in _run_code
+[2024-10-25 19:52:58] Output: exec(code, run_globals)
+[2024-10-25 19:52:59] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\cli.py", line 10, in <module>
+[2024-10-25 19:52:59] Output: from scripts.map_generator import MapGenerator
+[2024-10-25 19:52:59] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\map_generator.py", line 8, in <module>
+[2024-10-25 19:52:59] Output: from scripts.config_loader import load_config
+[2024-10-25 19:53:00] Output: ModuleNotFoundError: No module named 'scripts.config_loader'
+[2024-10-25 19:53:00] Output: Error: Environment verification failed
