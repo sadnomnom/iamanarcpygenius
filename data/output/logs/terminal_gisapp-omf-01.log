@@ -975,3 +975,5 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:20:29] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
 [2024-10-25 18:20:29] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
 [2024-10-25 18:20:30] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 18:22:39] Command: ./run_this.sh 
+[2024-10-25 18:22:40] Output: Verifying environment setup...
