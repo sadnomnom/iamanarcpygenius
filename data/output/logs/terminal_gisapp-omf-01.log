@@ -1102,3 +1102,20 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 19:39:06] Output: 
 [2024-10-25 19:43:03] Command: ./run_this.sh 
 [2024-10-25 19:43:03] Output: Verifying environment setup...
+[2024-10-25 19:43:07] Output: 2024-10-25 19:43:07,035 - scripts.helpers.verify_setup - INFO - Starting environment verification...
+[2024-10-25 19:43:07] Output: 2024-10-25 19:43:07,035 - scripts.helpers.verify_setup - INFO - Python version: 3.7.11
+[2024-10-25 19:43:07] Output: 2024-10-25 19:43:07,035 - scripts.helpers.verify_setup - INFO - \u2713 arcpy (for ArcGIS installation)
+[2024-10-25 19:43:08] Output: 2024-10-25 19:43:07,035 - scripts.helpers.verify_setup - INFO - \u2713 click (for CLI support)
+[2024-10-25 19:43:08] Output: 2024-10-25 19:43:07,819 - scripts.helpers.verify_setup - INFO - \u2713 pandas (for Data processing)
+[2024-10-25 19:43:08] Output: 2024-10-25 19:43:07,819 - scripts.helpers.verify_setup - INFO - \u2713 yaml (for Configuration)
+[2024-10-25 19:43:08] Output: 2024-10-25 19:43:07,819 - scripts.helpers.verify_setup - INFO - \u2713 ArcPy environment configured successfully
+[2024-10-25 19:43:09] Output: 2024-10-25 19:43:07,822 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\mxd
+[2024-10-25 19:43:09] Output: 2024-10-25 19:43:07,822 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\aprx
+[2024-10-25 19:43:09] Output: 2024-10-25 19:43:07,823 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\pdf
+[2024-10-25 19:43:10] Output: 2024-10-25 19:43:07,823 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
+[2024-10-25 19:43:10] Output: 2024-10-25 19:43:07,823 - scripts.helpers.verify_setup - INFO - \u2713 All verification checks passed
+[2024-10-25 19:43:10] Output: Environment verification successful!
+[2024-10-25 19:43:10] Output: 
+[2024-10-25 19:43:10] Output: Select processing mode:
+[2024-10-25 19:43:10] Output: 1. GUI Mode
+[2024-10-25 19:43:11] Output: 2. Command Line Mode
