@@ -12,16 +12,14 @@ TIMESTAMP=$(date "+%Y%m%d_%H%M%S")
 HOSTNAME=$(hostname)
 LOG_FILE="$LOG_DIR/terminal_${HOSTNAME}_${TIMESTAMP}.log"
 
-# Function to log with timestamp
-log_with_timestamp() {
-    while IFS= read -r line; do
-        echo "[$(date "+%Y-%m-%d %H:%M:%S")] $line" | tee -a "$LOG_FILE"
-    done
-}
-
 echo "Starting terminal logging to: $LOG_FILE"
 echo "Terminal session started on $HOSTNAME at $(date)" > "$LOG_FILE"
 
-# Start logging
-script -f -q "$LOG_FILE" | log_with_timestamp
+# Start logging by redirecting all output
+exec 1> >(while read -r line; do
+    echo "[$(date "+%Y-%m-%d %H:%M:%S")] $line" | tee -a "$LOG_FILE"
+done)
+exec 2>&1
 
+# Keep the terminal interactive
+exec < /dev/tty
