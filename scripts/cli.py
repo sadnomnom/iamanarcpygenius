@@ -69,6 +69,13 @@ def generate_maps(source_sub: str, year: str, resolution: int):
     """Generate maps for a source substation."""
     try:
         config = load_config()
+        
+        # Validate substation
+        if not validate_substation(source_sub, config):
+            valid_subs = ', '.join(sorted(config['substations']))
+            click.echo(f"Error: Invalid substation. Valid options are: {valid_subs}", err=True)
+            sys.exit(1)
+        
         workspace = Path(config['paths']['workspace'])
         generator = MapGenerator(workspace)
         
@@ -78,6 +85,10 @@ def generate_maps(source_sub: str, year: str, resolution: int):
             click.echo(f"Failed to generate maps for {source_sub}", err=True)
             sys.exit(1)
             
+    except ConfigurationError as e:
+        logger.error(f"Configuration error: {e}")
+        click.echo(f"Configuration error: {e}", err=True)
+        sys.exit(1)
     except Exception as e:
         logger.error(f"Failed to generate maps: {e}")
         click.echo(f"Error generating maps: {e}", err=True)

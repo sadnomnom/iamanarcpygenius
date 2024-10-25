@@ -7,6 +7,8 @@ from scripts.helpers.config_utils import load_config
 from scripts.helpers.logging_utils import get_logger
 from scripts.helpers.progress_bar import ProgressBar
 import traceback
+from scripts.helpers.config_utils import ConfigurationError
+from scripts.helpers.config_utils import validate_substation
 
 logger = get_logger(__name__)
 
@@ -128,26 +130,44 @@ class MapProcessorGUI:
     
     def _validate_inputs(self) -> bool:
         """Validate user inputs."""
-        year = self.year_var.get().strip()
-        source_sub = self.source_sub_var.get().strip()
-        
-        if not year:
-            messagebox.showerror("Error", "Please enter a processing year")
-            return False
-        
-        if not source_sub:
-            messagebox.showerror("Error", "Please enter a source substation")
-            return False
-        
         try:
-            resolution = int(self.resolution_var.get())
-            if resolution <= 0:
-                raise ValueError("Resolution must be positive")
-        except ValueError:
-            messagebox.showerror("Error", "Please enter a valid resolution (DPI)")
+            year = self.year_var.get().strip()
+            source_sub = self.source_sub_var.get().strip()
+            
+            if not year:
+                messagebox.showerror("Error", "Please enter a processing year")
+                return False
+            
+            if not source_sub:
+                messagebox.showerror("Error", "Please enter a source substation")
+                return False
+            
+            # Validate substation
+            if not validate_substation(source_sub, self.config):
+                messagebox.showerror(
+                    "Error", 
+                    f"Invalid substation: {source_sub}\n\n"
+                    f"Valid substations: {', '.join(sorted(self.config['substations']))}"
+                )
+                return False
+            
+            try:
+                resolution = int(self.resolution_var.get())
+                if resolution <= 0:
+                    raise ValueError("Resolution must be positive")
+            except ValueError:
+                messagebox.showerror("Error", "Please enter a valid resolution (DPI)")
+                return False
+            
+            return True
+            
+        except ConfigurationError as e:
+            messagebox.showerror("Configuration Error", str(e))
             return False
-        
-        return True
+        except Exception as e:
+            logger.error(f"Error validating inputs: {e}")
+            messagebox.showerror("Error", f"An error occurred while validating inputs: {e}")
+            return False
     
     def _get_processing_params(self) -> Dict[str, str]:
         """Get processing parameters from GUI inputs."""
