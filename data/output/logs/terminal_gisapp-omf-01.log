@@ -147,3 +147,24 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 17:59:43] Output: File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\__init__.py", line 88 in <module>
 [2024-10-25 17:59:44] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
 [2024-10-25 17:59:44] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 17:59:45] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 17:59:45] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 17:59:46] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 17:59:46] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\process_mxd.py", line 1 in <module>
+[2024-10-25 17:59:47] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 17:59:47] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 17:59:48] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 17:59:48] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 17:59:48] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 17:59:49] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\file_handler.py", line 4 in <module>
+[2024-10-25 17:59:49] Output: File "<frozen importlib._bootstrap>", line 219 in _call_with_frames_removed
+[2024-10-25 17:59:49] Output: File "<frozen importlib._bootstrap_external>", line 728 in exec_module
+[2024-10-25 17:59:50] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 17:59:50] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 17:59:51] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 17:59:51] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\tests\test_file_handler.py", line 3 in <module>
+[2024-10-25 17:59:52] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\assertion\rewrite.py", line 186 in exec_module
+[2024-10-25 17:59:52] Output: File "<frozen importlib._bootstrap>", line 677 in _load_unlocked
+[2024-10-25 17:59:52] Output: File "<frozen importlib._bootstrap>", line 967 in _find_and_load_unlocked
+[2024-10-25 17:59:53] Output: File "<frozen importlib._bootstrap>", line 983 in _find_and_load
+[2024-10-25 17:59:54] Output: File "<frozen importlib._bootstrap>", line 1006 in _gcd_import
