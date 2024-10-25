@@ -23,3 +23,4 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 17:55:19] Command: python -m pip list | findstr "pytest"
 [2024-10-25 17:55:22] Output: pytest                            7.4.4
 [2024-10-25 17:55:23] Output: pytest-cov                        4.1.0
+[2024-10-25 17:55:53] Command: python -m pip install --force-reinstall pytest pytest-cov
