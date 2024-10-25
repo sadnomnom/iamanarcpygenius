@@ -3,6 +3,8 @@ from pathlib import Path
 from scripts.file_handler import FileHandler
 from scripts.helpers.config_utils import load_config
 from scripts.helpers.logging_utils import get_logger
+import sys
+from scripts.helpers.verify_setup import run_verification
 
 logger = get_logger(__name__)
 
@@ -44,6 +46,15 @@ def batch_process(input_dir: str, output_dir: str, resolution: int):
                 click.echo(f"Successfully processed {input_path}")
             else:
                 click.echo(f"Failed to process {input_path}", err=True)
+
+@cli.command()
+def verify():
+    """Verify the environment setup."""
+    success = run_verification()
+    if not success:
+        click.echo("Environment verification failed. Check the logs for details.", err=True)
+        sys.exit(1)
+    click.echo("Environment verification successful!")
 
 if __name__ == '__main__':
     cli()
