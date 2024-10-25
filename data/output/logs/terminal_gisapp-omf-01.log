@@ -411,3 +411,4 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:06:53] Output: collecting ... collected 2 items / 2 deselected / 0 selected
 [2024-10-25 18:06:53] Output: 
 [2024-10-25 18:06:53] Output: ============================ 2 deselected in 0.03s ============================
+[2024-10-25 18:07:22] Command: python -m scripts.cli test -t integration
