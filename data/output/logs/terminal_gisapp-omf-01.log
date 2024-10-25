@@ -565,3 +565,18 @@ Terminal session resumed on gisapp-omf-01 at Fri, Oct 25, 2024  5:53:30 PM
 [2024-10-25 18:14:13] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\main.py", line 842 in genitems
 [2024-10-25 18:14:14] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\main.py", line 675 in perform_collect
 [2024-10-25 18:14:14] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\main.py", line 335 in pytest_collection
+[2024-10-25 18:14:15] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_callers.py", line 80 in _multicall
+[2024-10-25 18:14:16] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_manager.py", line 112 in _hookexec
+[2024-10-25 18:14:16] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_hooks.py", line 433 in __call__
+[2024-10-25 18:14:17] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\main.py", line 324 in _main
+[2024-10-25 18:14:17] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\main.py", line 271 in wrap_session
+[2024-10-25 18:14:18] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\main.py", line 318 in pytest_cmdline_main
+[2024-10-25 18:14:18] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_callers.py", line 80 in _multicall
+[2024-10-25 18:14:19] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_manager.py", line 112 in _hookexec
+[2024-10-25 18:14:19] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pluggy\_hooks.py", line 433 in __call__
+[2024-10-25 18:14:20] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\config\__init__.py", line 170 in main
+[2024-10-25 18:14:20] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\_pytest\config\__init__.py", line 192 in console_main
+[2024-10-25 18:14:21] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\pytest\__main__.py", line 5 in <module>
+[2024-10-25 18:14:22] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\runpy.py", line 85 in _run_code
+[2024-10-25 18:14:22] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\runpy.py", line 193 in _run_module_as_main
+[2024-10-25 18:14:22] Output: Windows fatal exception: code 0xe0000001
