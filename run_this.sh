@@ -1,40 +1,38 @@
 #!/bin/bash
 
+# Disable terminal logger traps temporarily
+trap - DEBUG
+
 # Set environment variables
 export PYTHONPATH="."
 export ARCGIS_PYTHON_API_VERSION=3.0
-export PYTHONUNBUFFERED=1  # Disable Python output buffering
+export PYTHONUNBUFFERED=1  # Force unbuffered output
+export PYTHONIOENCODING=utf-8  # Ensure proper encoding
 
-# Default test values for debugging
-TEST_SUBSTATION="EMILIE"  # Valid substation from config
+# Default test values
+TEST_SUBSTATION="EMILIE"
 TEST_YEAR="2024"
 
-# Colors for output
+# Colors
 GREEN='\033[0;32m'
 RED='\033[0;31m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
-# Function to handle errors and keep terminal open
+# Simple error handler
 handle_error() {
-    echo -e "${RED}Error occurred: $1${NC}"
-    echo "Press Enter to continue..."
-    read
+    echo -e "${RED}$1${NC}"
     exit 1
 }
 
-# Trap errors
-trap 'handle_error "Script interrupted"' INT TERM
-
+# Run verification
 echo "Verifying environment setup..."
-
-# Run verification with immediate output
 python -u -m scripts.cli verify
 VERIFY_STATUS=$?
 
 if [ $VERIFY_STATUS -eq 0 ]; then
     echo -e "${GREEN}Verification successful!${NC}"
     
-    # Run the main script with immediate output
+    # Run map generation
     python -u -m scripts.cli generate-maps "$TEST_SUBSTATION" --year "$TEST_YEAR"
     MAP_STATUS=$?
     
@@ -46,7 +44,3 @@ if [ $VERIFY_STATUS -eq 0 ]; then
 else
     handle_error "Environment verification failed"
 fi
-
-# Keep terminal open on success too
-echo "Press Enter to exit..."
-read
