@@ -1361,3 +1361,5 @@ Error: Map generation failed
 [2024-10-25 20:06:53] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\tkinter_gui.py", line 103, in process_maps
 [2024-10-25 20:06:53] Output: self.show_error(f"Error: {str(e)}")
 [2024-10-25 20:06:53] Output: AttributeError: 'MapProcessorGUI' object has no attribute 'show_error'
+[2024-10-25 20:11:02] Command: ./run_this.sh 
+[2024-10-25 20:11:03] Output: Verifying environment setup...
