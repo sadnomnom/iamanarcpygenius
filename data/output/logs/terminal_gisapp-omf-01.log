@@ -1525,3 +1525,5 @@ Map generation failed. Check the logs for details.Terminal session started on gi
 Terminal session started on gisapp-omf-01 at Fri, Oct 25, 2024  9:22:11 PM
 [2024-10-25 21:22:12] Command: echo "Logging enabled - all commands will be logged to ${LOG_FILE}"
 [2024-10-25 21:22:13] Output: ./terminal-logger.sh: line 27: echo "Logging enabled - all commands will be logged to ${LOG_FILE}": command not found
+[2024-10-25 21:22:13] Command: exec script -qf "$LOG_FILE" /dev/null
+[2024-10-25 21:22:14] Output: ./terminal-logger.sh: line 27: exec script -qf "$LOG_FILE" /dev/null: No such file or directory
