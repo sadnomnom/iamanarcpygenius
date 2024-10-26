@@ -4,7 +4,7 @@ from typing import Optional, Union
 from scripts.helpers.logging_utils import get_logger
 from scripts.process_mxd import MXDProcessor
 from scripts.process_aprx import APRXProcessor
-from scripts.helpers.progress_tracker import ProgressTracker  # Add this import
+from scripts.helpers.progress_bar import ProgressBar  # Changed from ProgressTracker
 import yaml
 
 logger = get_logger(__name__)
@@ -56,7 +56,7 @@ class FileHandler:
         """Process intersections between transformer and primary conductor layers."""
         try:
             logger.info(f"Starting intersection processing for {source_gdb}")
-            progress = ProgressTracker(total_steps=5, operation_name="Intersection Processing")
+            progress = ProgressBar(total_steps=5, operation_name="Intersection Processing")
             
             # Validate inputs
             progress.update(message="Validating network paths...")
