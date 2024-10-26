@@ -13,7 +13,7 @@ class ProgressTracker:
         self.operation_name = operation_name
         self.start_time = time.time()
         self.last_update = self.start_time
-        self.update_interval = 5  # seconds between progress updates
+        self.update_interval = 60  # seconds between progress updates (1 minute)
         
     def update(self, step: Optional[int] = None, message: str = ""):
         """Update progress with detailed logging."""
@@ -31,8 +31,11 @@ class ProgressTracker:
         elapsed = current_time - self.start_time
         elapsed_str = time.strftime("%H:%M:%S", time.gmtime(elapsed))
         
-        # If enough time has passed since last update
-        if current_time - self.last_update >= self.update_interval:
+        # Always log on first update, last update, or if enough time has passed
+        if (self.current_step == 1 or 
+            self.current_step == self.total_steps or 
+            current_time - self.last_update >= self.update_interval):
+            
             # Estimate remaining time
             if self.current_step > 0:
                 time_per_step = elapsed / self.current_step
