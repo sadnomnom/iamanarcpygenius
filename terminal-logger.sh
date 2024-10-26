@@ -1,60 +1,47 @@
 #!/bin/bash
 
-# Get the directory of this script
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# Set up log directory using project structure
-LOG_DIR="$SCRIPT_DIR/data/output/logs"
-mkdir -p "$LOG_DIR"
-
-# Set max log size (in bytes) - 10MB
-MAX_LOG_SIZE=$((10 * 1024 * 1024))
-
-# Use a consistent log file name for the current host
-HOSTNAME=$(hostname)
-LOG_FILE="$LOG_DIR/terminal_${HOSTNAME}.log"
-
-# Function to check log size and rotate if needed
-check_log_size() {
-    if [ -f "$LOG_FILE" ]; then
-        local size=$(stat -f%z "$LOG_FILE" 2>/dev/null || stat -c%s "$LOG_FILE" 2>/dev/null)
-        if [ "$size" -gt "$MAX_LOG_SIZE" ]; then
-            local timestamp=$(date "+%Y%m%d_%H%M%S")
-            mv "$LOG_FILE" "${LOG_FILE%.log}_${timestamp}.log"
-            gzip "${LOG_FILE%.log}_${timestamp}.log"
-            echo "Log file rotated due to size ($size bytes)" > "$LOG_FILE"
-        fi
-    fi
+# Get timestamp in the required format
+get_timestamp() {
+    date +"[%Y-%m-%d %H:%M:%S]"
 }
 
-# Create log file if it doesn't exist
-if [ ! -f "$LOG_FILE" ]; then
-    echo "Terminal session started on $HOSTNAME at $(date)" > "$LOG_FILE"
-else
-    echo "Terminal session resumed on $HOSTNAME at $(date)" >> "$LOG_FILE"
-fi
+# Create logs directory if it doesn't exist
+LOGS_DIR="data/output/logs"
+mkdir -p "$LOGS_DIR"
 
-# Function to log commands and their output
-log_command() {
-    # Check and rotate log if needed
-    check_log_size
+# Generate log filename with timestamp
+LOG_FILE="$LOGS_DIR/terminal_$(hostname)_$(date +%Y%m%d_%H%M%S).log"
+CURRENT_LOG="$LOGS_DIR/terminal_$(hostname).log"
+
+# Start logging
+echo "Terminal session started on $(hostname) at $(date +'%a, %b %d, %Y %l:%M:%S %p')" | tee -a "$LOG_FILE" "$CURRENT_LOG"
+
+# Function to log both command and output
+log_command_and_output() {
+    # Log the command with timestamp
+    echo "$(get_timestamp) Command: $BASH_COMMAND" >> "$LOG_FILE"
+    echo "$(get_timestamp) Command: $BASH_COMMAND" >> "$CURRENT_LOG"
     
-    # Get the command from history
-    local cmd=$(history 1 | sed 's/^\s*[0-9]*\s*//')
+    # Execute the command and capture its output
+    output=$("$@" 2>&1)
     
-    # Don't log the log_command function itself
-    if [[ "$cmd" != "log_command"* ]]; then
-        # Log the command
-        echo "[$(date "+%Y-%m-%d %H:%M:%S")] Command: $cmd" | tee -a "$LOG_FILE"
-        
-        # Execute the command and capture its output
-        eval "$cmd" 2>&1 | while read -r line; do
-            echo "[$(date "+%Y-%m-%d %H:%M:%S")] Output: $line" | tee -a "$LOG_FILE"
-        done
+    # If there's any output, log it with timestamp
+    if [ ! -z "$output" ]; then
+        while IFS= read -r line; do
+            echo "$(get_timestamp) Output: $line" >> "$LOG_FILE"
+            echo "$(get_timestamp) Output: $line" >> "$CURRENT_LOG"
+        done <<< "$output"
     fi
+    
+    # Display the output to the terminal
+    echo "$output"
 }
 
-# Set up trap to log commands
-trap 'log_command' DEBUG
+# Set up trap to log all commands and their output
+trap 'log_command_and_output "$BASH_COMMAND"' DEBUG
 
+# Inform user that logging has started
 echo "Logging enabled - all commands will be logged to $LOG_FILE"
+
+# Keep the terminal session active with logging
+exec script -q -f "$LOG_FILE" /dev/null
