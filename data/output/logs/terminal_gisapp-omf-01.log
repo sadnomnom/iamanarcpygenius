@@ -1490,3 +1490,31 @@ Map generation failed. Check the logs for details.[2024-10-25 21:13:43] Command:
 [2024-10-25 21:14:03] Output: 2024-10-25 21:14:02,442 - __main__ - ERROR - Failed to generate maps: Failed to process intersections
 [2024-10-25 21:14:03] Output: Error: Failed to process intersections
 [2024-10-25 21:14:05] Output: [0;31mMap generation failed. Check the logs for details.[0m
+Verifying environment setup...
+2024-10-25 21:14:10,013 - scripts.helpers.verify_setup - INFO - Starting environment verification...
+2024-10-25 21:14:10,028 - scripts.helpers.verify_setup - INFO - Python version: 3.7.11
+2024-10-25 21:14:10,028 - scripts.helpers.verify_setup - INFO - ✓ arcpy (for ArcGIS installation)
+2024-10-25 21:14:10,075 - scripts.helpers.verify_setup - INFO - ✓ click (for CLI support)
+2024-10-25 21:14:10,868 - scripts.helpers.verify_setup - INFO - ✓ pandas (for Data processing)
+2024-10-25 21:14:10,930 - scripts.helpers.verify_setup - INFO - ✓ yaml (for Configuration)
+2024-10-25 21:14:10,962 - scripts.helpers.verify_setup - INFO - ✓ ArcPy environment configured successfully
+2024-10-25 21:14:10,995 - scripts.helpers.verify_setup - INFO - ✓ Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\mxd
+2024-10-25 21:14:11,006 - scripts.helpers.verify_setup - INFO - ✓ Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\aprx
+2024-10-25 21:14:11,009 - scripts.helpers.verify_setup - INFO - ✓ Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\pdf
+2024-10-25 21:14:11,010 - scripts.helpers.verify_setup - INFO - ✓ Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
+2024-10-25 21:14:11,010 - scripts.helpers.verify_setup - INFO - ✓ All verification checks passed
+Environment verification successful!
+Verification successful!
+2
+EMILIE
+2024
+2024-10-25 21:14:16,637 - scripts.helpers.config_utils - WARNING - Path does not exist: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+2024-10-25 21:14:16,649 - scripts.helpers.config_utils - WARNING - Path does not exist: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+2024-10-25 21:14:16,661 - scripts.helpers.config_utils - WARNING - Path does not exist: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+2024-10-25 21:14:19,448 - scripts.map_generator - INFO - Initialized MapGenerator with workspace: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\Working2025.gdb
+2024-10-25 21:14:21,879 - scripts.file_handler - INFO - Starting intersection processing for \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\Working2025.gdb
+2024-10-25 21:14:21,891 - scripts.file_handler - ERROR - Error in process_intersections: name 'ProgressTracker' is not defined
+2024-10-25 21:14:21,896 - scripts.map_generator - ERROR - Failed to process intersections: local variable 'transformer_mcd' referenced before assignment
+2024-10-25 21:14:21,897 - __main__ - ERROR - Failed to generate maps: Failed to process intersections
+Error: Failed to process intersections
+Map generation failed. Check the logs for details.
