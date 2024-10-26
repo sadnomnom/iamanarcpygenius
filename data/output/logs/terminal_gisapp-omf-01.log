@@ -1307,3 +1307,5 @@ Error: Map generation failed
 [2024-10-25 20:02:35] Output: self.file_handler = FileHandler()  # Add this line
 [2024-10-25 20:02:36] Output: NameError: name 'FileHandler' is not defined
 [2024-10-25 20:02:36] Output: 
+[2024-10-25 20:04:28] Command: ./run_this.sh 
+[2024-10-25 20:04:28] Output: Verifying environment setup...
