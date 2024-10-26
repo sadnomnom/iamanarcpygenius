@@ -1461,4 +1461,5 @@ Failed to execute (Copy).
 
 2024-10-25 20:45:43,290 - __main__ - ERROR - Failed to generate maps: Failed to process intersections
 Error: Failed to process intersections
-Map generation failed. Check the logs for details.
+Map generation failed. Check the logs for details.[2024-10-25 21:13:43] Command: ./run_this.sh 
+[2024-10-25 21:13:43] Output: Verifying environment setup...
