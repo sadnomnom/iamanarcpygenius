@@ -1390,3 +1390,23 @@ Error: Map generation failed
 [2024-10-25 20:14:46] Output: Error: Map generation failed
 [2024-10-25 20:15:59] Command: ./run_this.sh 
 [2024-10-25 20:15:59] Output: Verifying environment setup...
+[2024-10-25 20:16:03] Output: 2024-10-25 20:16:03,072 - scripts.helpers.verify_setup - INFO - Starting environment verification...
+[2024-10-25 20:16:03] Output: 2024-10-25 20:16:03,072 - scripts.helpers.verify_setup - INFO - Python version: 3.7.11
+[2024-10-25 20:16:04] Output: 2024-10-25 20:16:03,072 - scripts.helpers.verify_setup - INFO - \u2713 arcpy (for ArcGIS installation)
+[2024-10-25 20:16:04] Output: 2024-10-25 20:16:03,072 - scripts.helpers.verify_setup - INFO - \u2713 click (for CLI support)
+[2024-10-25 20:16:04] Output: 2024-10-25 20:16:03,962 - scripts.helpers.verify_setup - INFO - \u2713 pandas (for Data processing)
+[2024-10-25 20:16:04] Output: 2024-10-25 20:16:03,962 - scripts.helpers.verify_setup - INFO - \u2713 yaml (for Configuration)
+[2024-10-25 20:16:04] Output: 2024-10-25 20:16:03,962 - scripts.helpers.verify_setup - INFO - \u2713 ArcPy environment configured successfully
+[2024-10-25 20:16:05] Output: 2024-10-25 20:16:03,993 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\mxd
+[2024-10-25 20:16:05] Output: 2024-10-25 20:16:03,993 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\input\aprx
+[2024-10-25 20:16:05] Output: 2024-10-25 20:16:03,993 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\pdf
+[2024-10-25 20:16:06] Output: 2024-10-25 20:16:03,993 - scripts.helpers.verify_setup - INFO - \u2713 Directory exists: C:\Users\A.A919579\Samantha\iamanarcpygenius\data\output\logs
+[2024-10-25 20:16:06] Output: 2024-10-25 20:16:03,993 - scripts.helpers.verify_setup - INFO - \u2713 All verification checks passed
+[2024-10-25 20:16:07] Output: Environment verification successful!
+[2024-10-25 20:16:07] Output: [0;32mVerification successful![0m
+[2024-10-25 20:16:08] Output: 2
+[2024-10-25 20:16:08] Output: EMILIE
+[2024-10-25 20:16:08] Output: 2024
+[2024-10-25 20:16:10] Output: 2024-10-25 20:16:09,935 - scripts.helpers.config_utils - WARNING - Path does not exist: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+[2024-10-25 20:16:10] Output: 2024-10-25 20:16:10,138 - scripts.helpers.config_utils - WARNING - Path does not exist: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+[2024-10-25 20:16:10] Output: 2024-10-25 20:16:10,169 - scripts.helpers.config_utils - WARNING - Path does not exist: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
