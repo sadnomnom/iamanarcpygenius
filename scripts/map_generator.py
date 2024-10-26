@@ -30,28 +30,35 @@ class MapGenerator:
     def generate_maps(self, source_sub: str, year: str) -> bool:
         """Generate all maps for a given substation with detailed logging."""
         logger.info(f"Starting map generation for {source_sub} (year: {year})")
+        progress = ProgressTracker(total_steps=100, operation_name="Map Generation")
         
         try:
-            # Process vegetation data
-            logger.info("Building SQL expression...")
+            # Process vegetation data (30%)
+            progress.update(10, "Building SQL expression...")
             expression = self._build_expression(source_sub)
             logger.debug(f"SQL Expression: {expression}")
             
-            logger.info("Processing vegetation data...")
+            progress.update(20, "Processing vegetation data...")
             if not self.veg_processor.process_vegetation_data(source_sub, expression):
                 logger.error("Vegetation data processing failed")
                 return False
             
-            # Process maps
+            # Process maps (70%)
             map_types = ['Internal', 'External', 'InternalOverview', 'ExternalOverview']
-            for map_type in map_types:
-                logger.info(f"Processing {map_type} map...")
+            maps_per_type = 70 / len(map_types)
+            
+            for i, map_type in enumerate(map_types):
+                current_progress = 30 + (i * maps_per_type)
+                progress.update(current_progress, f"Processing {map_type} map...")
+                
                 if not self._process_map(source_sub, map_type, year):
                     logger.error(f"Failed to process {map_type} map")
                     return False
-                logger.info(f"Successfully processed {map_type} map")
+                    
+                progress.update(current_progress + maps_per_type - 1, 
+                              f"Completed {map_type} map")
             
-            logger.info(f"Map generation completed successfully for {source_sub}")
+            progress.complete(f"Map generation completed successfully for {source_sub}")
             return True
             
         except Exception as e:
