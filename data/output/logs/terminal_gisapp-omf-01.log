@@ -1357,3 +1357,7 @@ Error: Map generation failed
 [2024-10-25 20:06:52] Output: 
 [2024-10-25 20:06:52] Output: Traceback (most recent call last):
 [2024-10-25 20:06:52] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\tkinter\__init__.py", line 1705, in __call__
+[2024-10-25 20:06:52] Output: return self.func(*args)
+[2024-10-25 20:06:53] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\tkinter_gui.py", line 103, in process_maps
+[2024-10-25 20:06:53] Output: self.show_error(f"Error: {str(e)}")
+[2024-10-25 20:06:53] Output: AttributeError: 'MapProcessorGUI' object has no attribute 'show_error'
