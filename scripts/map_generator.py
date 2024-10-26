@@ -107,32 +107,26 @@ class MapGenerator:
         try:
             config = self.config['paths']['source_data']
             
-            # Ensure workspace exists
-            if not self.workspace.exists():
-                logger.error(f"Workspace does not exist: {self.workspace}")
+            # Check if files are locked
+            if arcpy.TestSchemaLock(config['xfmr']):
+                logger.warning(f"Source file is locked: {config['xfmr']}")
                 return False
             
-            # Process intersections with retries
+            # Process with retry logic for concurrent access
             max_retries = 3
             for attempt in range(max_retries):
                 try:
-                    result = self.file_handler.process_intersections(
+                    return self.file_handler.process_intersections(
                         config['xfmr'],
                         config['pricond'],
                         str(self.workspace)
                     )
-                    if result:
-                        return True
-                except Exception as e:
-                    logger.warning(f"Attempt {attempt + 1} failed: {e}")
-                    if attempt < max_retries - 1:
-                        logger.info("Retrying...")
-                        continue
-                    break
-                    
-            logger.error("Failed to process intersections after all retries")
-            return False
-            
+                except arcpy.ExecuteError as e:
+                    if "ERROR 000464" in str(e):  # Cannot acquire lock
+                        if attempt < max_retries - 1:
+                            logger.info("File locked, retrying...")
+                            continue
+                    raise
         except Exception as e:
             logger.error(f"Failed to process intersections: {e}")
             return False

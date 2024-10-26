@@ -98,6 +98,14 @@ class FileHandler:
         except Exception as e:
             logger.error(f"Error in process_intersections: {str(e)}")
             return False
+        finally:
+            # Clean up temporary layers
+            for layer in [transformer_mcd, pricond_mcd]:
+                if arcpy.Exists(layer):
+                    try:
+                        arcpy.Delete_management(layer)
+                    except:
+                        logger.warning(f"Could not clean up layer: {layer}")
 
     def process_veg(self, in_pricond: str, in_xfmr: str, expression: str, 
                    source_sub: str, source_gdb: str) -> bool:

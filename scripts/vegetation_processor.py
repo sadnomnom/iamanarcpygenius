@@ -20,6 +20,12 @@ class VegetationProcessor:
     def process_vegetation_data(self, source_sub: str, expression: str) -> bool:
         """Process vegetation management data for a given substation."""
         try:
+            # Save current workspace
+            original_workspace = arcpy.env.workspace
+            
+            # Use our workspace temporarily
+            arcpy.env.workspace = str(self.workspace)
+            
             logger.info(f"Processing vegetation data for {source_sub}")
             logger.debug(f"Using workspace: {self.workspace}")
             logger.debug(f"SQL Expression: {expression}")
@@ -29,9 +35,6 @@ class VegetationProcessor:
                 logger.error(f"Workspace does not exist: {self.workspace}")
                 return False
                 
-            # Set workspace
-            arcpy.env.workspace = str(self.workspace)
-            
             # Create feature layers
             logger.info("Creating feature layers...")
             xfmr_layer = f"XFMR_MCD_{source_sub}"
@@ -78,6 +81,10 @@ class VegetationProcessor:
             logger.error(f"Error processing vegetation data: {e}")
             logger.error(f"Error details: {type(e).__name__}")
             return False
+        
+        finally:
+            # Restore original workspace
+            arcpy.env.workspace = original_workspace
     
     def _process_statistics(self, pricond_lyr: str, xfmr_lyr: str, source_sub: str):
         """Process statistics for primary conductor and transformer layers."""
