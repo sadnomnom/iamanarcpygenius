@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import Dict, List, Optional
 from scripts.helpers.logging_utils import get_logger
 from scripts.helpers.config_utils import load_config
+from scripts.file_handler import FileHandler  # Add this import
 
 logger = get_logger(__name__)
 
@@ -12,7 +13,7 @@ class VegetationProcessor:
     def __init__(self, workspace: Path):
         self.workspace = workspace
         self.config = load_config()
-        self.file_handler = FileHandler()  # Add this line
+        self.file_handler = FileHandler()
         arcpy.env.workspace = str(workspace)
         arcpy.env.overwriteOutput = True
         

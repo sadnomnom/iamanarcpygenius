@@ -15,18 +15,13 @@ class MapGenerator:
     def __init__(self, workspace: Path):
         """Initialize the map generator with workspace path."""
         try:
-            self.config = load_config()
-            # Use provided workspace or get from config
             self.workspace = workspace
-            if not self.workspace.exists():
-                raise ConfigurationError(f"Workspace directory does not exist: {self.workspace}")
-            
+            self.config = load_config()
             self.file_handler = FileHandler()
-            self.veg_processor = VegetationProcessor(self.workspace)
-            logger.info(f"Initialized MapGenerator with workspace: {self.workspace}")
-            
-            arcpy.env.workspace = str(self.workspace)
+            self.veg_processor = VegetationProcessor(workspace)
+            arcpy.env.workspace = str(workspace)
             arcpy.env.overwriteOutput = True
+            logger.info(f"Initialized MapGenerator with workspace: {self.workspace}")
             
         except Exception as e:
             logger.error(f"Failed to initialize MapGenerator: {e}")
