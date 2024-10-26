@@ -1517,4 +1517,8 @@ EMILIE
 2024-10-25 21:14:21,896 - scripts.map_generator - ERROR - Failed to process intersections: local variable 'transformer_mcd' referenced before assignment
 2024-10-25 21:14:21,897 - __main__ - ERROR - Failed to generate maps: Failed to process intersections
 Error: Failed to process intersections
-Map generation failed. Check the logs for details.
+Map generation failed. Check the logs for details.Terminal session started on gisapp-omf-01 at Fri, Oct 25, 2024  9:20:13 PM
+[2024-10-25 21:20:14] Command: echo "Logging enabled - all commands will be logged to $LOG_FILE"
+[2024-10-25 21:20:15] Output: ./terminal-logger.sh: line 26: echo "Logging enabled - all commands will be logged to $LOG_FILE": command not found
+[2024-10-25 21:20:15] Command: exec script -q -f "$LOG_FILE" /dev/null
+[2024-10-25 21:20:16] Output: ./terminal-logger.sh: line 26: exec script -q -f "$LOG_FILE" /dev/null: No such file or directory
