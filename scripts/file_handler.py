@@ -56,39 +56,42 @@ class FileHandler:
         try:
             logger.info(f"Starting intersection processing for {source_gdb}")
             
-            # Get paths from config
-            config = load_config()
-            mcd_path = config['paths']['source_data']['mcd']
-            
-            # Validate inputs
-            if not arcpy.Exists(in_xfmr):
-                logger.error(f"Transformer layer not found: {in_xfmr}")
+            # Test network access first
+            if not Path(in_xfmr).parent.exists():
+                logger.error(f"Cannot access network path: {Path(in_xfmr).parent}")
                 return False
-            if not arcpy.Exists(in_pricond):
-                logger.error(f"Primary conductor layer not found: {in_pricond}")
+                
+            if not Path(in_pricond).parent.exists():
+                logger.error(f"Cannot access network path: {Path(in_pricond).parent}")
                 return False
-            if not arcpy.Exists(mcd_path):
-                logger.error(f"MCD feature class not found: {mcd_path}")
-                return False
-            
+                
             # Create Transformer_MCD intersection
-            transformer_mcd = f"{source_gdb}\\Transformer_MCD"
+            transformer_mcd = f"{source_gdb}\\XFMR_MCD"
             logger.info("Creating Transformer_MCD intersection...")
+            
+            # Delete existing feature class if it exists
+            if arcpy.Exists(transformer_mcd):
+                arcpy.Delete_management(transformer_mcd)
+                
             arcpy.Intersect_analysis(
-                [in_xfmr, mcd_path],
+                [in_xfmr, in_pricond],
                 transformer_mcd,
                 output_type="POINT"
             )
             
-            # Copy primary conductor
+            # Copy primary conductor layer
+            pricond_mcd = f"{source_gdb}\\PriCond_MCD"
             logger.info("Copying primary conductor layers...")
-            year = config['options']['default_year']
-            for output_name in ["PriCondSGB_MergeMCD", f"PriCondSGB_MergeMCD_{year}"]:
-                output_path = f"{source_gdb}\\{output_name}"
-                arcpy.Copy_management(in_pricond, output_path)
+            
+            # Delete existing feature class if it exists
+            if arcpy.Exists(pricond_mcd):
+                arcpy.Delete_management(pricond_mcd)
                 
+            arcpy.Copy_management(in_pricond, pricond_mcd)
+            
+            logger.info("Intersection processing completed successfully")
             return True
-                
+            
         except arcpy.ExecuteError:
             logger.error(f"ArcPy error: {arcpy.GetMessages(2)}")
             return False

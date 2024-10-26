@@ -106,11 +106,33 @@ class MapGenerator:
         """Process intersections for the workspace."""
         try:
             config = self.config['paths']['source_data']
-            return self.file_handler.process_intersections(
-                config['xfmr'],
-                config['pricond'],
-                str(self.workspace)
-            )
+            
+            # Ensure workspace exists
+            if not self.workspace.exists():
+                logger.error(f"Workspace does not exist: {self.workspace}")
+                return False
+            
+            # Process intersections with retries
+            max_retries = 3
+            for attempt in range(max_retries):
+                try:
+                    result = self.file_handler.process_intersections(
+                        config['xfmr'],
+                        config['pricond'],
+                        str(self.workspace)
+                    )
+                    if result:
+                        return True
+                except Exception as e:
+                    logger.warning(f"Attempt {attempt + 1} failed: {e}")
+                    if attempt < max_retries - 1:
+                        logger.info("Retrying...")
+                        continue
+                    break
+                    
+            logger.error("Failed to process intersections after all retries")
+            return False
+            
         except Exception as e:
             logger.error(f"Failed to process intersections: {e}")
             return False
