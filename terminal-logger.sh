@@ -6,21 +6,22 @@ get_timestamp() {
 }
 
 # Create logs directory if it doesn't exist
-LOGS_DIR="data/output/logs"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+LOGS_DIR="${SCRIPT_DIR}/data/output/logs"
 mkdir -p "$LOGS_DIR"
 
-# Generate log filename with timestamp
-LOG_FILE="$LOGS_DIR/terminal_$(hostname)_$(date +%Y%m%d_%H%M%S).log"
-CURRENT_LOG="$LOGS_DIR/terminal_$(hostname).log"
+# Generate log filename with hostname
+HOSTNAME=$(hostname)
+LOG_FILE="${LOGS_DIR}/terminal_${HOSTNAME}.log"
+CURRENT_LOG="${LOGS_DIR}/terminal_${HOSTNAME}.log"
 
 # Start logging
-echo "Terminal session started on $(hostname) at $(date +'%a, %b %d, %Y %l:%M:%S %p')" | tee -a "$LOG_FILE" "$CURRENT_LOG"
+echo "Terminal session started on ${HOSTNAME} at $(date +'%a, %b %d, %Y %l:%M:%S %p')" | tee -a "$LOG_FILE"
 
 # Function to log both command and output
 log_command_and_output() {
     # Log the command with timestamp
-    echo "$(get_timestamp) Command: $BASH_COMMAND" >> "$LOG_FILE"
-    echo "$(get_timestamp) Command: $BASH_COMMAND" >> "$CURRENT_LOG"
+    echo "$(get_timestamp) Command: $BASH_COMMAND" | tee -a "$LOG_FILE"
     
     # Execute the command and capture its output
     output=$("$@" 2>&1)
@@ -28,8 +29,7 @@ log_command_and_output() {
     # If there's any output, log it with timestamp
     if [ ! -z "$output" ]; then
         while IFS= read -r line; do
-            echo "$(get_timestamp) Output: $line" >> "$LOG_FILE"
-            echo "$(get_timestamp) Output: $line" >> "$CURRENT_LOG"
+            echo "$(get_timestamp) Output: $line" | tee -a "$LOG_FILE"
         done <<< "$output"
     fi
     
@@ -41,7 +41,7 @@ log_command_and_output() {
 trap 'log_command_and_output "$BASH_COMMAND"' DEBUG
 
 # Inform user that logging has started
-echo "Logging enabled - all commands will be logged to $LOG_FILE"
+echo "Logging enabled - all commands will be logged to ${LOG_FILE}"
 
 # Keep the terminal session active with logging
-exec script -q -f "$LOG_FILE" /dev/null
+exec script -qf "$LOG_FILE" /dev/null
