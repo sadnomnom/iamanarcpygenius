@@ -59,7 +59,7 @@ class FileHandler:
             progress = ProgressBar(total_steps=5, operation_name="Intersection Processing")
             
             # Validate inputs
-            progress.update(message="Validating network paths...")
+            progress.update(1, "Validating network paths")  # Changed from message= to status
             if not Path(in_xfmr).parent.exists():
                 logger.error(f"Cannot access network path: {Path(in_xfmr).parent}")
                 return False
@@ -69,16 +69,16 @@ class FileHandler:
                 return False
                 
             # Create Transformer_MCD intersection
-            progress.update(message="Creating Transformer_MCD intersection...")
+            progress.update(2, "Creating Transformer_MCD intersection")  # Fixed update calls
             transformer_mcd = f"{source_gdb}\\XFMR_MCD"
             
             # Delete existing if needed
             if arcpy.Exists(transformer_mcd):
-                progress.update(message="Removing existing Transformer_MCD...")
+                progress.update(3, "Removing existing Transformer_MCD")
                 arcpy.Delete_management(transformer_mcd)
             
             # Perform intersection
-            progress.update(message="Performing intersection analysis...")
+            progress.update(4, "Performing intersection analysis")
             arcpy.Intersect_analysis(
                 [in_xfmr, in_pricond],
                 transformer_mcd,
@@ -86,16 +86,16 @@ class FileHandler:
             )
             
             # Copy primary conductor
-            progress.update(message="Copying primary conductor layers...")
+            progress.update(5, "Copying primary conductor layers")
             pricond_mcd = f"{source_gdb}\\PriCond_MCD"
             
             if arcpy.Exists(pricond_mcd):
-                progress.update(message="Removing existing PriCond_MCD...")
+                progress.update(5, "Removing existing PriCond_MCD")
                 arcpy.Delete_management(pricond_mcd)
                 
             arcpy.Copy_management(in_pricond, pricond_mcd)
             
-            progress.complete("All intersection operations completed successfully")
+            progress.update(5, "All intersection operations completed successfully")
             return True
             
         except arcpy.ExecuteError:
