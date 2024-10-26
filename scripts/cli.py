@@ -73,21 +73,24 @@ def generate_maps(source_sub: str, year: str):
     try:
         config = load_config()
         
-        # Validate substation
         if not validate_substation(source_sub, config):
             raise click.ClickException(f"Invalid substation: {source_sub}")
             
-        # Initialize workspace
         workspace = Path(config['paths']['workspace'])
-        
-        # Generate maps
         generator = MapGenerator(workspace)
-        if not generator.process_maps(source_sub, year):
+        
+        if not generator.process_intersections():
+            raise click.ClickException("Failed to process intersections")
+            
+        if not generator.generate_maps(source_sub, year):
             raise click.ClickException("Failed to generate maps")
             
+    except ConfigurationError as e:
+        logger.error(f"Configuration error: {e}")
+        raise click.ClickException(str(e))
     except Exception as e:
         logger.error(f"Failed to generate maps: {e}")
-        raise click.ClickException(f"Error generating maps: {e}")
+        raise click.ClickException(str(e))
 
 @cli.command()
 def gui():

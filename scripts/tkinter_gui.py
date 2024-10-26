@@ -74,59 +74,33 @@ class MapProcessorGUI:
             frame.pack(fill=tk.X, padx=10, pady=5)
     
     def process_maps(self):
-        """Process maps with progress tracking and error handling."""
+        """Process maps based on user input."""
         try:
-            # Validate inputs
-            if not self._validate_inputs():
+            source_sub = self.source_sub_var.get().strip()
+            year = self.year_var.get().strip()
+            
+            config = load_config()
+            if not validate_substation(source_sub, config):
+                self.show_error("Invalid substation")
                 return
             
-            # Get processing parameters
-            params = self._get_processing_params()
-            
-            # Initialize progress
-            total_steps = 4  # Number of main processing steps
-            current_step = 0
-            self.progress.reset()
-            
-            # Update status
-            self.status_var.set("Processing maps...")
-            self.root.update()
-            
-            # Initialize map generator
-            workspace = Path(self.config['paths']['workspace'])
+            workspace = Path(config['paths']['workspace'])
             generator = MapGenerator(workspace)
             
-            try:
-                # Step 1: Process intersections
-                current_step += 1
-                self.progress.update(current_step * 25, "Processing intersections...")
-                if not generator.process_intersections():
-                    raise Exception("Failed to process intersections")
+            # Process intersections first
+            if not generator.process_intersections():
+                raise Exception("Failed to process intersections")
                 
-                # Step 2: Process vegetation data
-                current_step += 1
-                self.progress.update(current_step * 25, "Processing vegetation data...")
-                if not generator.process_vegetation_data(params['source_sub'], params['year']):
-                    raise Exception("Failed to process vegetation data")
+            # Then generate maps
+            if not generator.generate_maps(source_sub, year):
+                raise Exception("Failed to generate maps")
                 
-                # Step 3: Generate maps
-                current_step += 1
-                self.progress.update(current_step * 25, "Generating maps...")
-                if not generator.generate_maps(params['source_sub'], params['year']):
-                    raise Exception("Failed to generate maps")
-                
-                # Step 4: Complete
-                current_step += 1
-                self.progress.update(current_step * 25, "Processing complete!")
-                
-                messagebox.showinfo("Success", "Maps processed successfully!")
-                
-            except Exception as e:
-                self._handle_error(e)
-                return
+            self.show_success("Maps generated successfully!")
             
         except Exception as e:
-            self._handle_error(e)
+            logger.error(f"Error in GUI processing: {e}")
+            logger.error(f"Traceback:\n{traceback.format_exc()}")
+            self.show_error(f"Error: {str(e)}")
     
     def _validate_inputs(self) -> bool:
         """Validate user inputs."""
