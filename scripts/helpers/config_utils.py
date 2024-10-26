@@ -44,9 +44,19 @@ def validate_config(config: Dict) -> None:
     for path_key in required_paths:
         if path_key not in config['paths']:
             raise ConfigurationError(f"Missing required path: {path_key}")
-        path = Path(config['paths'][path_key])
-        if not path.exists():
-            logger.warning(f"Path does not exist: {path}")
+        
+        # Convert to Path object
+        path_str = config['paths'][path_key]
+        if not path_str:
+            raise ConfigurationError(f"Empty path for: {path_key}")
+            
+        try:
+            path = Path(path_str)
+            # Only check existence for non-workspace paths initially
+            if path_key != 'workspace' and not path.exists():
+                logger.warning(f"Path does not exist: {path}")
+        except Exception as e:
+            raise ConfigurationError(f"Invalid path format for {path_key}: {e}")
     
     # Validate options
     if 'default_year' not in config['options']:

@@ -4,14 +4,14 @@
 paths:
   workspace: "\\\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\GDB\\Working2025.gdb"
   # Use double backslashes for Windows paths
-  mxd_input: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025"
-  aprx_input: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025"
-  pdf_output: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025\\Export"
-  logs: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\GDB\\logs"
+  mxd_input: "\\\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025"
+  aprx_input: "\\\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025"
+  pdf_output: "\\\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\MXD\\2025\\Export"
+  logs: "\\\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\GDB\\logs"
   source_data:
-    xfmr: "\\gisapp-omf-01\\E\\Data\\DataStore\\PECO\\GTechElectricModel.gdb\\V_XFMR_PT"
-    pricond: "\\gisapp-omf-01\\E\\Data\\DataStore\\PECO\\GTechElectricModel.gdb\\PriCondSGB_MergeMCD"
-    mcd: "\\exelonds\\exutilshare\\GDVA\\PECO\\GDB\\BaseFeatures.gdb\\PECO_MCD_ServiceType"
+    xfmr: "\\\\gisapp-omf-01\\E\\Data\\DataStore\\PECO\\GTechElectricModel.gdb\\V_XFMR_PT"
+    pricond: "\\\\gisapp-omf-01\\E\\Data\\DataStore\\PECO\\GTechElectricModel.gdb\\PriCondSGB_MergeMCD"
+    mcd: "\\\\exelonds\\exutilshare\\GDVA\\PECO\\GDB\\BaseFeatures.gdb\\PECO_MCD_ServiceType"
   excel:
     source: "\\exelonds\\exutilshare\\GDVA\\PECO\\Projects\\VegManagement\\Workspace\\2025\\DPM_Projects2025.xlsx"
     sheet_name: "Export"

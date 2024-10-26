@@ -17,7 +17,7 @@ logger = get_logger(__name__)
 
 @click.group()
 def cli():
-    """Command line interface for map processing pipeline."""
+    """Map processing pipeline CLI."""
     pass
 
 @cli.command()
@@ -67,41 +67,27 @@ def process_maps():
 
 @cli.command()
 @click.argument('source_sub')
-@click.option('--year', '-y', default='2024', help='Processing year')
-@click.option('--resolution', '-r', default=300, help='PDF export resolution (DPI)')
-def generate_maps(source_sub: str, year: str, resolution: int):
-    """Generate maps for a source substation."""
+@click.option('--year', default='2024', help='Processing year')
+def generate_maps(source_sub: str, year: str):
+    """Generate maps for a given substation."""
     try:
         config = load_config()
         
         # Validate substation
         if not validate_substation(source_sub, config):
-            valid_subs = ', '.join(sorted(config['substations']))
-            click.echo(f"Error: Invalid substation. Valid options are: {valid_subs}", err=True)
-            sys.exit(1)
-        
-        # Get workspace from config
+            raise click.ClickException(f"Invalid substation: {source_sub}")
+            
+        # Initialize workspace
         workspace = Path(config['paths']['workspace'])
-        if not workspace.exists():
-            click.echo(f"Error: Workspace directory does not exist: {workspace}", err=True)
-            sys.exit(1)
-            
-        generator = MapGenerator(workspace)
         
-        if generator.generate_maps(source_sub, year):
-            click.echo(f"Successfully generated maps for {source_sub}")
-        else:
-            click.echo(f"Failed to generate maps for {source_sub}", err=True)
-            sys.exit(1)
+        # Generate maps
+        generator = MapGenerator(workspace)
+        if not generator.process_maps(source_sub, year):
+            raise click.ClickException("Failed to generate maps")
             
-    except ConfigurationError as e:
-        logger.error(f"Configuration error: {e}")
-        click.echo(f"Configuration error: {e}", err=True)
-        sys.exit(1)
     except Exception as e:
         logger.error(f"Failed to generate maps: {e}")
-        click.echo(f"Error generating maps: {e}", err=True)
-        sys.exit(1)
+        raise click.ClickException(f"Error generating maps: {e}")
 
 @cli.command()
 def gui():

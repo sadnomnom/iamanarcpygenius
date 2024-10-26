@@ -5,25 +5,28 @@ from scripts.helpers.logging_utils import get_logger
 from scripts.file_handler import FileHandler
 from scripts.vegetation_processor import VegetationProcessor
 import traceback
-from scripts.helpers.config_utils import load_config, ConfigurationError
+from scripts.helpers.config_utils import load_config, ConfigurationError, validate_substation
 
 logger = get_logger(__name__)
 
 class MapGenerator:
     """Handles the complete map generation pipeline."""
     
-    def __init__(self, workspace: Optional[Path] = None):
+    def __init__(self, workspace: Path):
         """Initialize the map generator with workspace path."""
         try:
             self.config = load_config()
             # Use provided workspace or get from config
-            self.workspace = workspace or Path(self.config['paths']['workspace'])
+            self.workspace = workspace
             if not self.workspace.exists():
                 raise ConfigurationError(f"Workspace directory does not exist: {self.workspace}")
             
             self.file_handler = FileHandler()
             self.veg_processor = VegetationProcessor(self.workspace)
             logger.info(f"Initialized MapGenerator with workspace: {self.workspace}")
+            
+            arcpy.env.workspace = str(self.workspace)
+            arcpy.env.overwriteOutput = True
             
         except Exception as e:
             logger.error(f"Failed to initialize MapGenerator: {e}")
