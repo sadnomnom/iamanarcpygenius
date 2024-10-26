@@ -1,40 +1,41 @@
 #!/bin/bash
 
-# Function to check last command status
-check_status() {
-    if [ $? -ne 0 ]; then
-        echo "Error: $1 failed"
+# Set environment variables
+export PYTHONPATH="."
+export ARCGIS_PYTHON_API_VERSION=3.0
+
+# Default test values for debugging
+TEST_SUBSTATION="EMILIE"  # Valid substation from config
+TEST_YEAR="2024"
+
+# Colors for output
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+echo "Verifying environment setup..."
+
+# Run verification first
+python -m scripts.cli verify
+
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}Verification successful!${NC}"
+    
+    # For debugging: automatically select CLI mode (2) and pass test values
+    echo "2" # Select CLI mode
+    echo $TEST_SUBSTATION # Input substation
+    echo $TEST_YEAR # Input year
+    
+    # Run the main script with the test inputs
+    python -m scripts.cli generate-maps $TEST_SUBSTATION --year $TEST_YEAR
+    
+    if [ $? -eq 0 ]; then
+        echo -e "${GREEN}Map generation completed successfully!${NC}"
+    else
+        echo -e "${RED}Map generation failed. Check the logs for details.${NC}"
         exit 1
     fi
-}
-
-# Step 1: Verify environment setup
-echo "Verifying environment setup..."
-python -m scripts.cli verify
-check_status "Environment verification"
-
-# Ask user for processing mode
-echo -e "\nSelect processing mode:"
-echo "1. GUI Mode"
-echo "2. Command Line Mode"
-read -p "Enter choice (1 or 2): " mode
-
-if [ "$mode" = "1" ]; then
-    # Launch GUI
-    echo "Launching GUI..."
-    python -m scripts.cli gui
-    
 else
-    # Command Line Mode
-    # Get processing parameters
-    read -p "Enter source substation: " source_sub
-    read -p "Enter processing year [2024]: " year
-    year=${year:-2024}
-    
-    # Step 2: Generate maps
-    echo -e "\nGenerating maps..."
-    python -m scripts.cli generate-maps "$source_sub" --year "$year"
-    check_status "Map generation"
-    
-    echo -e "\nProcessing complete!"
+    echo -e "${RED}Environment verification failed${NC}"
+    exit 1
 fi
