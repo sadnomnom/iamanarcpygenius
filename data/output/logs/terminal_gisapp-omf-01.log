@@ -1343,3 +1343,17 @@ Error: Map generation failed
 [2024-10-25 20:06:36] Output: self.file_handler = FileHandler()  # Add this line
 [2024-10-25 20:06:37] Output: NameError: name 'FileHandler' is not defined
 [2024-10-25 20:06:37] Output: 
+[2024-10-25 20:06:49] Output: Exception in Tkinter callback
+[2024-10-25 20:06:49] Output: Traceback (most recent call last):
+[2024-10-25 20:06:50] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\tkinter_gui.py", line 88, in process_maps
+[2024-10-25 20:06:50] Output: generator = MapGenerator(workspace)
+[2024-10-25 20:06:50] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\map_generator.py", line 25, in __init__
+[2024-10-25 20:06:50] Output: self.veg_processor = VegetationProcessor(self.workspace)
+[2024-10-25 20:06:50] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\vegetation_processor.py", line 15, in __init__
+[2024-10-25 20:06:51] Output: self.file_handler = FileHandler()  # Add this line
+[2024-10-25 20:06:51] Output: NameError: name 'FileHandler' is not defined
+[2024-10-25 20:06:51] Output: 
+[2024-10-25 20:06:52] Output: During handling of the above exception, another exception occurred:
+[2024-10-25 20:06:52] Output: 
+[2024-10-25 20:06:52] Output: Traceback (most recent call last):
+[2024-10-25 20:06:52] Output: File "C:\Users\A.A919579\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\tkinter\__init__.py", line 1705, in __call__
