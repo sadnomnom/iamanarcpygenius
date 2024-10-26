@@ -17,20 +17,32 @@ echo "Verifying environment setup..."
 
 # Run verification first
 python -m scripts.cli verify
+VERIFY_STATUS=$?
 
-if [ $? -eq 0 ]; then
+if [ $VERIFY_STATUS -eq 0 ]; then
     echo -e "${GREEN}Verification successful!${NC}"
     
-    # Run the main script with command line arguments instead of echo
+    # Run the main script with command line arguments
     python -m scripts.cli generate-maps "$TEST_SUBSTATION" --year "$TEST_YEAR"
+    MAP_STATUS=$?
     
-    if [ $? -eq 0 ]; then
+    if [ $MAP_STATUS -eq 0 ]; then
         echo -e "${GREEN}Map generation completed successfully!${NC}"
     else
         echo -e "${RED}Map generation failed. Check the logs for details.${NC}"
-        exit 1
+        echo "Press any key to continue..."
+        read -n 1
+        exit $MAP_STATUS
     fi
 else
     echo -e "${RED}Environment verification failed${NC}"
-    exit 1
+    echo "Press any key to continue..."
+    read -n 1
+    exit $VERIFY_STATUS
+fi
+
+# Keep terminal open on error
+if [ $? -ne 0 ]; then
+    echo "Press any key to continue..."
+    read -n 1
 fi
