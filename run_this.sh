@@ -30,19 +30,9 @@ if [ $VERIFY_STATUS -eq 0 ]; then
         echo -e "${GREEN}Map generation completed successfully!${NC}"
     else
         echo -e "${RED}Map generation failed. Check the logs for details.${NC}"
-        echo "Press any key to continue..."
-        read -n 1
         exit $MAP_STATUS
     fi
 else
     echo -e "${RED}Environment verification failed${NC}"
-    echo "Press any key to continue..."
-    read -n 1
     exit $VERIFY_STATUS
-fi
-
-# Keep terminal open on error
-if [ $? -ne 0 ]; then
-    echo "Press any key to continue..."
-    read -n 1
 fi

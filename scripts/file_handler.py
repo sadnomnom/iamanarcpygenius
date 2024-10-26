@@ -4,6 +4,7 @@ from typing import Optional, Union
 from scripts.helpers.logging_utils import get_logger
 from scripts.process_mxd import MXDProcessor
 from scripts.process_aprx import APRXProcessor
+from scripts.helpers.progress_tracker import ProgressTracker  # Add this import
 import yaml
 
 logger = get_logger(__name__)
