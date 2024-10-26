@@ -21,13 +21,8 @@ python -m scripts.cli verify
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Verification successful!${NC}"
     
-    # For debugging: automatically select CLI mode (2) and pass test values
-    echo "2" # Select CLI mode
-    echo $TEST_SUBSTATION # Input substation
-    echo $TEST_YEAR # Input year
-    
-    # Run the main script with the test inputs
-    python -m scripts.cli generate-maps $TEST_SUBSTATION --year $TEST_YEAR
+    # Run the main script with command line arguments instead of echo
+    python -m scripts.cli generate-maps "$TEST_SUBSTATION" --year "$TEST_YEAR"
     
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}Map generation completed successfully!${NC}"
