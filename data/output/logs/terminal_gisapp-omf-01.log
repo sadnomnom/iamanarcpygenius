@@ -1294,3 +1294,16 @@ Error: Map generation failed
 [2024-10-25 20:02:16] Output: 2. Command Line Mode
 [2024-10-25 20:02:20] Output: Enter choice (1 or 2): Launching GUI...
 [2024-10-25 20:02:24] Output: 2024-10-25 20:02:24,165 - scripts.helpers.config_utils - WARNING - Path does not exist: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+[2024-10-25 20:02:33] Output: 2024-10-25 20:02:32,896 - scripts.helpers.config_utils - WARNING - Path does not exist: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+[2024-10-25 20:02:33] Output: 2024-10-25 20:02:32,896 - scripts.helpers.config_utils - WARNING - Path does not exist: \\exelonds\exutilshare\GDVA\PECO\Projects\VegManagement\GDB\logs
+[2024-10-25 20:02:33] Output: 2024-10-25 20:02:32,896 - scripts.map_generator - ERROR - Failed to initialize MapGenerator: name 'FileHandler' is not defined
+[2024-10-25 20:02:33] Output: 2024-10-25 20:02:32,896 - scripts.tkinter_gui - ERROR - Error in GUI processing: name 'FileHandler' is not defined
+[2024-10-25 20:02:33] Output: 2024-10-25 20:02:32,911 - scripts.tkinter_gui - ERROR - Traceback (most recent call last):
+[2024-10-25 20:02:34] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\tkinter_gui.py", line 97, in process_maps
+[2024-10-25 20:02:34] Output: generator = MapGenerator(workspace)
+[2024-10-25 20:02:34] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\map_generator.py", line 25, in __init__
+[2024-10-25 20:02:35] Output: self.veg_processor = VegetationProcessor(self.workspace)
+[2024-10-25 20:02:35] Output: File "C:\Users\A.A919579\Samantha\iamanarcpygenius\scripts\vegetation_processor.py", line 15, in __init__
+[2024-10-25 20:02:35] Output: self.file_handler = FileHandler()  # Add this line
+[2024-10-25 20:02:36] Output: NameError: name 'FileHandler' is not defined
+[2024-10-25 20:02:36] Output: 
